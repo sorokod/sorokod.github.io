@@ -3,56 +3,56 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://example.org/post/2018-03-16-fibonacci/</loc>
+    <loc>https://sorokod.github.io/post/2018-03-16-fibonacci/</loc>
     <lastmod>2018-03-16T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/page/about/</loc>
+    <loc>https://sorokod.github.io/page/about/</loc>
   </url>
   
   <url>
-    <loc>http://example.org/tags/algo/</loc>
-    <lastmod>2018-03-16T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://example.org/categories/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://example.org/tags/jmh/</loc>
+    <loc>https://sorokod.github.io/tags/algo/</loc>
     <lastmod>2018-03-16T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://example.org/tags/kotlin/</loc>
+    <loc>https://sorokod.github.io/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://sorokod.github.io/tags/jmh/</loc>
     <lastmod>2018-03-16T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://example.org/page/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://example.org/post/</loc>
+    <loc>https://sorokod.github.io/tags/kotlin/</loc>
     <lastmod>2018-03-16T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://example.org/tags/</loc>
+    <loc>https://sorokod.github.io/page/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://sorokod.github.io/post/</loc>
     <lastmod>2018-03-16T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://example.org/</loc>
+    <loc>https://sorokod.github.io/tags/</loc>
+    <lastmod>2018-03-16T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://sorokod.github.io/</loc>
     <lastmod>2018-03-16T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>

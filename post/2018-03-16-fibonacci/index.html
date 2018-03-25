@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>Fibonacci</title>
+  <meta property="og:title" content="Fibonacci" />
+  <meta name="twitter:title" content="Fibonacci" />
+  <meta name="description" content="Fibonacci with tail recursion in Kotlin">
+  <meta property="og:description" content="Fibonacci with tail recursion in Kotlin">
+  <meta name="twitter:description" content="Fibonacci with tail recursion in Kotlin">
+  <meta name="author" content="David Soroko"/>
+  <meta property="og:image" content="http://example.org/img/magpie.png" />
+  <meta name="twitter:image" content="http://example.org/img/magpie.png" />
+  <meta name="twitter:card" content="summary" />
+  <meta property="og:url" content="http://example.org/post/2018-03-16-fibonacci/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="magpie" />
+
+  <meta name="generator" content="Hugo 0.37.1" />
+  <link rel="canonical" href="http://example.org/post/2018-03-16-fibonacci/" />
+  <link rel="alternate" href="http://example.org/index.xml" type="application/rss+xml" title="magpie">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="http://example.org/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" /><link rel="stylesheet" href="http://example.org/css/syntax.css" /><link rel="stylesheet" href="http://example.org/css/codeblock.css" />
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css" integrity="sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css" integrity="sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R" crossorigin="anonymous">
+
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+</head>
+
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="http://example.org/">magpie</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li>
+              <a title="Blog" href="/">Blog</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="About" href="/page/about/">About</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Tags" href="/tags">Tags</a>
+            </li>
+          
+        
+
+        
+
+        
+      </ul>
+    </div>
+
+    <div class="avatar-container">
+      <div class="avatar-img-border">
+        
+          <a title="magpie" href="http://example.org/">
+            <img class="avatar-img" src="http://example.org/img/magpie.png" alt="magpie" />
+          </a>
+        
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+
+
+
+    
+  
+  
+  
+
+
+
+
+  
+
+  <header class="header-section ">
+    
+    <div class="intro-header no-img">
+      
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="post-heading">
+              <h1>Fibonacci</h1>
+                
+                  
+                    <h2 class="post-subheading">Fibonacci with tail recursion in Kotlin</h2>
+                  
+                
+                
+                  <span class="post-meta">
+  
+  
+  <i class="fa fa-calendar-o"></i>&nbsp;Posted on March 16, 2018
+  
+  
+  
+</span>
+
+
+                
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+    
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        <p><img src="/img/fibonacci-sequence.png" alt="Fibonacci spiral" /></p>
+
+<p>I enjoyed reading the <a href="https://blog.des.io/posts/2018-03-08-fibonacci.html">The Fibonacci Problem blog post</a> that shows (among other things) a tail recursive algorithm for the Fibonacci sequence.</p>
+
+<p></p>
+
+<p>The original code is in Golang which has no tail recursion optimization. I wanted to compare the Golang code to Kotlin, see Kotlin&rsquo;s <code>tailrec</code> in action and measure the entire thing with <a href="http://openjdk.java.net/projects/code-tools/jmh/"><code>jmh</code></a>.</p>
+
+<p>I retained the original function names (up to capitalization) so the original Golang code:</p>
+
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="kd">func</span> <span class="nx">FibNaive</span><span class="p">(</span><span class="nx">n</span> <span class="kt">int</span><span class="p">)</span> <span class="kt">int</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="nx">n</span> <span class="p">&lt;</span> <span class="mi">2</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="nx">n</span>
+    <span class="p">}</span>   
+    <span class="k">return</span> <span class="nx">FibNaive</span><span class="p">(</span><span class="nx">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="nx">FibNaive</span><span class="p">(</span><span class="nx">n</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span>
+<span class="p">}</span></code></pre></div>
+
+<p>looks like so in my version in Kotlin:</p>
+
+<div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="k">fun</span> <span class="nf">fibNaive</span><span class="p">(</span><span class="n">n</span><span class="p">:</span> <span class="n">Int</span><span class="p">):</span> <span class="n">Int</span> <span class="p">=</span>
+        <span class="k">when</span> <span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="p">{</span>
+            <span class="m">0</span><span class="p">,</span> <span class="m">1</span> <span class="p">-&gt;</span> <span class="n">n</span>
+            <span class="k">else</span> <span class="p">-&gt;</span> <span class="n">fibNaive</span><span class="p">(</span><span class="n">n</span> <span class="p">-</span> <span class="m">1</span><span class="p">)</span> <span class="p">+</span> <span class="n">fibNaive</span><span class="p">(</span><span class="n">n</span> <span class="p">-</span> <span class="m">2</span><span class="p">)</span>
+        <span class="p">}</span></code></pre></div>
+
+<blockquote>
+<p>All sources are <a href="https://github.com/sorokod/kotlin-fibonaccis">here</a>. To build and run, execute:</p>
+
+<p><code>mvn clean install &amp;&amp; java -jar target/benchmarks.jar</code></p>
+</blockquote>
+
+<h2 id="fibcached">FibCached</h2>
+
+<p>Here, we improve on the naive approach by caching the intermediate results:</p>
+
+<div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="ln"> 1</span><span class="k">fun</span> <span class="nf">fibCached</span><span class="p">(</span><span class="n">n</span><span class="p">:</span> <span class="n">Int</span><span class="p">):</span> <span class="n">Int</span> <span class="p">{</span>
+<span class="ln"> 2</span>
+<span class="ln"> 3</span>    <span class="k">fun</span> <span class="nf">fibCachedHelper</span><span class="p">(</span><span class="n">n</span><span class="p">:</span> <span class="n">Int</span><span class="p">,</span> <span class="n">cache</span><span class="p">:</span> <span class="n">MutableMap</span><span class="p">&lt;</span><span class="n">Int</span><span class="p">,</span> <span class="n">Int</span><span class="p">&gt;):</span> <span class="n">Int</span> <span class="p">=</span>
+<span class="ln"> 4</span>            <span class="n">cache</span><span class="p">.</span><span class="n">getOrPut</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="p">{</span>
+<span class="ln"> 5</span>                <span class="k">val</span> <span class="py">a</span> <span class="p">=</span> <span class="n">cache</span><span class="p">.</span><span class="n">getOrPut</span><span class="p">(</span><span class="n">n</span> <span class="p">-</span> <span class="m">1</span><span class="p">)</span> <span class="p">{</span>
+<span class="ln"> 6</span>                    <span class="n">fibCachedHelper</span><span class="p">(</span><span class="n">n</span> <span class="p">-</span> <span class="m">1</span><span class="p">,</span> <span class="n">cache</span><span class="p">)</span>
+<span class="ln"> 7</span>                <span class="p">}</span>
+<span class="ln"> 8</span>                <span class="k">val</span> <span class="py">b</span> <span class="p">=</span> <span class="n">cache</span><span class="p">.</span><span class="n">getOrPut</span><span class="p">(</span><span class="n">n</span> <span class="p">-</span> <span class="m">2</span><span class="p">)</span> <span class="p">{</span>
+<span class="ln"> 9</span>                    <span class="n">fibCachedHelper</span><span class="p">(</span><span class="n">n</span> <span class="p">-</span> <span class="m">2</span><span class="p">,</span> <span class="n">cache</span><span class="p">)</span>
+<span class="ln">10</span>                <span class="p">}</span>
+<span class="ln">11</span>                <span class="n">a</span> <span class="p">+</span> <span class="n">b</span>
+<span class="ln">12</span>            <span class="p">}</span>
+<span class="ln">13</span>
+<span class="ln">14</span>    <span class="k">return</span> <span class="n">fibCachedHelper</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">mutableMapOf</span><span class="p">(</span><span class="n">Pair</span><span class="p">(</span><span class="m">0</span><span class="p">,</span> <span class="m">0</span><span class="p">),</span> <span class="n">Pair</span><span class="p">(</span><span class="m">1</span><span class="p">,</span> <span class="m">1</span><span class="p">)))</span>
+<span class="ln">15</span><span class="p">}</span></code></pre></div>
+
+<p>This gives us over five orders of magnitude improvement over <code>fibNaive</code>.</p>
+
+<h2 id="fibvectorsum">FibVectorSum</h2>
+
+<p>The key observation here is that we can replace two recursive calls each returning a scalar ( i.e.  <code>f(n-1) + f(n-2)</code> ) with a single recursive
+call that returns a vector (a Pair really).</p>
+
+<div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="ln"> 1</span><span class="k">fun</span> <span class="nf">T</span><span class="p">(</span><span class="n">p</span><span class="p">:</span> <span class="n">Pair</span><span class="p">&lt;</span><span class="n">Int</span><span class="p">,</span> <span class="n">Int</span><span class="p">&gt;):</span> <span class="n">Pair</span><span class="p">&lt;</span><span class="n">Int</span><span class="p">,</span> <span class="n">Int</span><span class="p">&gt;</span> <span class="p">=</span> <span class="n">Pair</span><span class="p">(</span><span class="n">p</span><span class="p">.</span><span class="n">first</span> <span class="p">+</span> <span class="n">p</span><span class="p">.</span><span class="n">second</span><span class="p">,</span> <span class="n">p</span><span class="p">.</span><span class="n">first</span><span class="p">)</span>
+<span class="ln"> 2</span>
+<span class="ln"> 3</span><span class="k">fun</span> <span class="nf">fibVecSum</span><span class="p">(</span><span class="n">n</span><span class="p">:</span> <span class="n">Int</span><span class="p">):</span> <span class="n">Int</span> <span class="p">{</span>
+<span class="ln"> 4</span>
+<span class="ln"> 5</span>    <span class="k">fun</span> <span class="nf">fibVec</span><span class="p">(</span><span class="n">n</span><span class="p">:</span> <span class="n">Int</span><span class="p">):</span> <span class="n">Pair</span><span class="p">&lt;</span><span class="n">Int</span><span class="p">,</span> <span class="n">Int</span><span class="p">&gt;</span> <span class="p">=</span>
+<span class="ln"> 6</span>            <span class="k">when</span> <span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="p">{</span>
+<span class="ln"> 7</span>                <span class="m">1</span> <span class="p">-&gt;</span> <span class="n">Pair</span><span class="p">(</span><span class="m">1</span><span class="p">,</span> <span class="m">0</span><span class="p">)</span>
+<span class="ln"> 8</span>                <span class="k">else</span> <span class="p">-&gt;</span> <span class="n">T</span><span class="p">(</span><span class="n">fibVec</span><span class="p">(</span><span class="n">n</span> <span class="p">-</span> <span class="m">1</span><span class="p">))</span>
+<span class="ln"> 9</span>            <span class="p">}</span>
+<span class="ln">10</span>
+<span class="ln">11</span>
+<span class="ln">12</span>    <span class="k">return</span> <span class="k">when</span> <span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="p">{</span>
+<span class="ln">13</span>        <span class="m">0</span><span class="p">,</span> <span class="m">1</span> <span class="p">-&gt;</span> <span class="n">n</span>
+<span class="ln">14</span>
+<span class="ln">15</span>        <span class="k">else</span> <span class="p">-&gt;</span> <span class="p">{</span>
+<span class="ln">16</span>            <span class="k">val</span> <span class="err">(</span><span class="py">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span> <span class="p">=</span> <span class="n">fibVec</span><span class="p">(</span><span class="n">n</span> <span class="p">-</span> <span class="m">1</span><span class="p">)</span>
+<span class="ln">17</span>            <span class="n">a</span> <span class="p">+</span> <span class="n">b</span>
+<span class="ln">18</span>        <span class="p">}</span>
+<span class="ln">19</span>    <span class="p">}</span>
+<span class="ln">20</span><span class="p">}</span></code></pre></div>
+
+<p>This gives us an order of magnitude improvement over <code>fibCached</code>.</p>
+
+<p>Incidentally, there is a a more Kotlin-idiomatic way to implement the same approach using the <code>generateSequence</code> function. It doesn&rsquo;t match
+ the narrative of the original post though:</p>
+
+<div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="k">fun</span> <span class="nf">fibVecSumKotlin</span><span class="p">(</span><span class="n">n</span><span class="p">:</span> <span class="n">Int</span><span class="p">):</span> <span class="n">Int</span> <span class="p">{</span>
+
+    <span class="k">fun</span> <span class="nf">genPairSequence</span><span class="p">():</span> <span class="n">Sequence</span><span class="p">&lt;</span><span class="n">Pair</span><span class="p">&lt;</span><span class="n">Int</span><span class="p">,</span> <span class="n">Int</span><span class="p">&gt;&gt;</span> <span class="p">=</span>
+            <span class="n">generateSequence</span><span class="p">(</span><span class="n">Pair</span><span class="p">(</span><span class="m">1</span><span class="p">,</span> <span class="m">0</span><span class="p">),</span> <span class="p">{</span> <span class="n">T</span><span class="p">(</span><span class="n">it</span><span class="p">)</span> <span class="p">})</span>
+
+    <span class="k">return</span> <span class="n">genPairSequence</span><span class="p">().</span><span class="n">take</span><span class="p">(</span><span class="n">n</span> <span class="p">+</span> <span class="m">1</span><span class="p">).</span><span class="n">last</span><span class="p">().</span><span class="n">second</span>
+<span class="p">}</span></code></pre></div>
+
+<h2 id="fibtailvecsum">FibTailVecSum</h2>
+
+<p>The remaining issue in <code>FibVectorSum</code> preventing it being tail recursive is the transformation at line 8. This can be fixed by accumulating
+the sum into the recursive call:</p>
+
+<div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="ln"> 1</span><span class="k">fun</span> <span class="nf">fibTailVecSum</span><span class="p">(</span><span class="n">n</span><span class="p">:</span> <span class="n">Int</span><span class="p">):</span> <span class="n">Int</span> <span class="p">{</span>
+<span class="ln"> 2</span>
+<span class="ln"> 3</span>    <span class="k">tailrec</span> <span class="k">fun</span> <span class="nf">fibTailVec</span><span class="p">(</span><span class="n">acc</span><span class="p">:</span> <span class="n">Int</span><span class="p">,</span> <span class="n">a</span><span class="p">:</span> <span class="n">Int</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span> <span class="n">Int</span><span class="p">):</span> <span class="n">Pair</span><span class="p">&lt;</span><span class="n">Int</span><span class="p">,</span> <span class="n">Int</span><span class="p">&gt;</span> <span class="p">=</span>            
+<span class="ln"> 4</span>            <span class="k">when</span> <span class="p">(</span><span class="n">acc</span><span class="p">)</span> <span class="p">{</span>
+<span class="ln"> 5</span>                <span class="m">1</span> <span class="p">-&gt;</span> <span class="n">Pair</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+<span class="ln"> 6</span>                <span class="k">else</span> <span class="p">-&gt;</span> <span class="n">fibTailVec</span><span class="p">(</span><span class="n">acc</span> <span class="p">-</span> <span class="m">1</span><span class="p">,</span> <span class="n">a</span> <span class="p">+</span> <span class="n">b</span><span class="p">,</span> <span class="n">a</span><span class="p">)</span>
+<span class="ln"> 7</span>            <span class="p">}</span>
+<span class="ln"> 8</span>    
+<span class="ln"> 9</span>    <span class="k">return</span> <span class="k">when</span> <span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="p">{</span>
+<span class="ln">10</span>        <span class="m">0</span><span class="p">,</span> <span class="m">1</span> <span class="p">-&gt;</span> <span class="n">n</span>
+<span class="ln">11</span>        <span class="k">else</span> <span class="p">-&gt;</span> <span class="p">{</span>
+<span class="ln">12</span>            <span class="k">val</span> <span class="err">(</span><span class="py">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span> <span class="p">=</span> <span class="n">fibTailVec</span><span class="p">(</span><span class="n">n</span> <span class="p">-</span> <span class="m">1</span><span class="p">,</span> <span class="m">1</span><span class="p">,</span> <span class="m">0</span><span class="p">)</span>
+<span class="ln">13</span>            <span class="n">a</span> <span class="p">+</span> <span class="n">b</span>
+<span class="ln">14</span>        <span class="p">}</span>
+<span class="ln">15</span>    <span class="p">}</span>
+<span class="ln">16</span><span class="p">}</span></code></pre></div>
+
+<p>Note the <code>tailrec</code> decoration of the recursive function at line 3. Once again we have an order of magnitude improvement over the previous take; <code>fibVectorSum</code>.</p>
+
+<h2 id="fibiterative">FibIterative</h2>
+
+<p>In the iterative version the <code>fibTailVec</code> is replaced by a while loop</p>
+
+<div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="k">fun</span> <span class="nf">fibIterative</span><span class="p">(</span><span class="n">n</span><span class="p">:</span> <span class="n">Int</span><span class="p">):</span> <span class="n">Int</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">n</span> <span class="p">&lt;</span> <span class="m">2</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">n</span>
+    <span class="p">}</span>
+
+    <span class="k">var</span> <span class="py">acc</span> <span class="p">=</span> <span class="n">n</span>
+    <span class="k">var</span> <span class="py">a</span> <span class="p">=</span> <span class="m">1</span>
+    <span class="k">var</span> <span class="py">b</span> <span class="p">=</span> <span class="m">0</span>
+    <span class="k">var</span> <span class="py">tmp</span> <span class="p">=</span> <span class="m">0</span>
+
+    <span class="k">while</span> <span class="p">(</span><span class="n">acc</span> <span class="p">&gt;</span> <span class="m">2</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">acc</span><span class="p">--</span>
+        <span class="n">tmp</span> <span class="p">=</span> <span class="n">a</span>
+        <span class="n">a</span> <span class="p">+=</span> <span class="n">b</span>
+        <span class="n">b</span> <span class="p">=</span> <span class="n">tmp</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="n">a</span> <span class="p">+</span> <span class="n">b</span>
+<span class="p">}</span></code></pre></div>
+
+<p>The code is more verbose than the Go version because Kotlin has no &ldquo;multiple assignments&rdquo; as in <code>n, a, b = n-1, a+b, a</code>.</p>
+
+<p>It is also the fastest.</p>
+
+<h2 id="benchmarks">Benchmarks</h2>
+
+<p>Benchmarks were generated using <code>jmh</code> with the following configuration:</p>
+
+<div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="n">@State</span><span class="p">(</span><span class="n">Scope</span><span class="p">.</span><span class="n">Benchmark</span><span class="p">)</span>
+<span class="n">@Fork</span><span class="p">(</span><span class="m">1</span><span class="p">)</span>
+<span class="n">@Warmup</span><span class="p">(</span><span class="n">iterations</span> <span class="p">=</span> <span class="m">15</span><span class="p">)</span>
+<span class="n">@Measurement</span><span class="p">(</span><span class="n">iterations</span> <span class="p">=</span> <span class="m">15</span><span class="p">)</span>
+<span class="n">@BenchmarkMode</span><span class="p">(</span><span class="n">AverageTime</span><span class="p">)</span>
+<span class="n">@OutputTimeUnit</span><span class="p">(</span><span class="n">NANOSECONDS</span><span class="p">)</span></code></pre></div>
+
+<table>
+<thead>
+<tr>
+<th>Benchmark</th>
+<th>(n)</th>
+<th>Score</th>
+<th>Units</th>
+<th>Normalaized by <code>fibIterative</code></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>fibNaive</td>
+<td>12</td>
+<td>505.787</td>
+<td>ns/op</td>
+<td>109</td>
+</tr>
+
+<tr>
+<td>fibNaive</td>
+<td>40</td>
+<td>359727438.400</td>
+<td>ns/op</td>
+<td>32702494</td>
+</tr>
+
+<tr>
+<td>fibCached</td>
+<td>12</td>
+<td>490.736</td>
+<td>ns/op</td>
+<td>106</td>
+</tr>
+
+<tr>
+<td>fibCached</td>
+<td>40</td>
+<td>1393.079</td>
+<td>ns/op</td>
+<td>123</td>
+</tr>
+
+<tr>
+<td>fibVecSum</td>
+<td>12</td>
+<td>56.979</td>
+<td>ns/op</td>
+<td>12</td>
+</tr>
+
+<tr>
+<td>fibVecSum</td>
+<td>40</td>
+<td>242.230</td>
+<td>ns/op</td>
+<td>21</td>
+</tr>
+
+<tr>
+<td>fibVecSumKotlin</td>
+<td>12</td>
+<td>99.435</td>
+<td>ns/op</td>
+<td>21</td>
+</tr>
+
+<tr>
+<td>fibVecSumKotlin</td>
+<td>40</td>
+<td>273.117</td>
+<td>ns/op</td>
+<td>24</td>
+</tr>
+
+<tr>
+<td>fibTailVecSum</td>
+<td>12</td>
+<td>8.447</td>
+<td>ns/op</td>
+<td>2</td>
+</tr>
+
+<tr>
+<td>fibTailVecSum</td>
+<td>40</td>
+<td>14.800</td>
+<td>ns/op</td>
+<td>1</td>
+</tr>
+
+<tr>
+<td>fibIterative</td>
+<td>12</td>
+<td>4.666</td>
+<td>ns/op</td>
+<td>1</td>
+</tr>
+
+<tr>
+<td>fibIterative</td>
+<td>40</td>
+<td>11.372</td>
+<td>ns/op</td>
+<td>1</td>
+</tr>
+
+<tr>
+<td>fibIterativeTabulated</td>
+<td>12</td>
+<td>81.520</td>
+<td>ns/op</td>
+<td>17</td>
+</tr>
+
+<tr>
+<td>fibIterativeTabulated</td>
+<td>40</td>
+<td>257.801</td>
+<td>ns/op</td>
+<td>22</td>
+</tr>
+</tbody>
+</table>
+      </article>
+
+      
+        <ul class="pager blog-pager">
+          
+          
+        </ul>
+      
+
+
+      
+
+    </div>
+  </div>
+</div>
+
+    <footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+              <li>
+                <a href="https://stackoverflow.com/users/239101/david-soroko" title="StackOverflow">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-stack-overflow fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          
+            
+              David Soroko
+            
+          
+
+          &nbsp;&bull;&nbsp;
+          2018
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="http://example.org/">magpie</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          <a href="http://gohugo.io">Hugo v0.37.1</a> powered &nbsp;&bull;&nbsp; Theme by <a href="http://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a> adapted to <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.js" integrity="sha384-/y1Nn9+QQAipbNQWU65krzJralCnuOasHncUFXGkdwntGeSvQicrYkiUBwsgUqc1" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/contrib/auto-render.min.js" integrity="sha384-dq1/gEHSxPZQ7DdrM82ID4YVol9BYyU7GbWlIwnwyPzotpoc57wDw/guX8EaYGPx" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="http://example.org/js/main.js"></script><script> renderMathInElement(document.body); </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js" integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js" integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script>
+<script src="http://example.org/js/load-photoswipe.js"></script>
+
+
+
+
+
+
+  </body>
+</html>
+

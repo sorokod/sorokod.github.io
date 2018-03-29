@@ -213,7 +213,7 @@
         <span class="p">}</span></code></pre></div>
 
 <blockquote>
-<p>All sources are <a href="https://github.com/sorokod/kotlin-fibonaccis">here</a>. To build and run, execute:</p>
+<p>Sources are <a href="https://github.com/sorokod/kotlin-fibonaccis">here</a>. To build and run, execute:</p>
 
 <p><code>mvn clean install &amp;&amp; java -jar target/benchmarks.jar</code></p>
 </blockquote>
@@ -222,23 +222,20 @@
 
 <p>Here, we improve on the naive approach by caching the intermediate results:</p>
 
-<div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="ln"> 1</span><span class="k">fun</span> <span class="nf">fibCached</span><span class="p">(</span><span class="n">n</span><span class="p">:</span> <span class="n">Int</span><span class="p">):</span> <span class="n">Int</span> <span class="p">{</span>
-<span class="ln"> 2</span>
-<span class="ln"> 3</span>    <span class="k">fun</span> <span class="nf">fibCachedHelper</span><span class="p">(</span><span class="n">n</span><span class="p">:</span> <span class="n">Int</span><span class="p">,</span> <span class="n">cache</span><span class="p">:</span> <span class="n">MutableMap</span><span class="p">&lt;</span><span class="n">Int</span><span class="p">,</span> <span class="n">Int</span><span class="p">&gt;):</span> <span class="n">Int</span> <span class="p">=</span>
-<span class="ln"> 4</span>            <span class="n">cache</span><span class="p">.</span><span class="n">getOrPut</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="p">{</span>
-<span class="ln"> 5</span>                <span class="k">val</span> <span class="py">a</span> <span class="p">=</span> <span class="n">cache</span><span class="p">.</span><span class="n">getOrPut</span><span class="p">(</span><span class="n">n</span> <span class="p">-</span> <span class="m">1</span><span class="p">)</span> <span class="p">{</span>
-<span class="ln"> 6</span>                    <span class="n">fibCachedHelper</span><span class="p">(</span><span class="n">n</span> <span class="p">-</span> <span class="m">1</span><span class="p">,</span> <span class="n">cache</span><span class="p">)</span>
-<span class="ln"> 7</span>                <span class="p">}</span>
-<span class="ln"> 8</span>                <span class="k">val</span> <span class="py">b</span> <span class="p">=</span> <span class="n">cache</span><span class="p">.</span><span class="n">getOrPut</span><span class="p">(</span><span class="n">n</span> <span class="p">-</span> <span class="m">2</span><span class="p">)</span> <span class="p">{</span>
-<span class="ln"> 9</span>                    <span class="n">fibCachedHelper</span><span class="p">(</span><span class="n">n</span> <span class="p">-</span> <span class="m">2</span><span class="p">,</span> <span class="n">cache</span><span class="p">)</span>
-<span class="ln">10</span>                <span class="p">}</span>
-<span class="ln">11</span>                <span class="n">a</span> <span class="p">+</span> <span class="n">b</span>
-<span class="ln">12</span>            <span class="p">}</span>
-<span class="ln">13</span>
-<span class="ln">14</span>    <span class="k">return</span> <span class="n">fibCachedHelper</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">mutableMapOf</span><span class="p">(</span><span class="n">Pair</span><span class="p">(</span><span class="m">0</span><span class="p">,</span> <span class="m">0</span><span class="p">),</span> <span class="n">Pair</span><span class="p">(</span><span class="m">1</span><span class="p">,</span> <span class="m">1</span><span class="p">)))</span>
-<span class="ln">15</span><span class="p">}</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="ln">1</span><span class="k">fun</span> <span class="nf">fibCached</span><span class="p">(</span>
+<span class="ln">2</span>    <span class="n">n</span><span class="p">:</span> <span class="n">Int</span><span class="p">,</span> 
+<span class="ln">3</span>    <span class="n">cache</span><span class="p">:</span> <span class="n">MutableMap</span><span class="p">&lt;</span><span class="n">Int</span><span class="p">,</span> <span class="n">Int</span><span class="p">&gt;</span> <span class="p">=</span> <span class="n">mutableMapOf</span><span class="p">(</span><span class="n">Pair</span><span class="p">(</span><span class="m">0</span><span class="p">,</span> <span class="m">0</span><span class="p">),</span> <span class="n">Pair</span><span class="p">(</span><span class="m">1</span><span class="p">,</span> <span class="m">1</span><span class="p">))):</span> <span class="n">Int</span> <span class="p">=</span>
+<span class="ln">4</span>    
+<span class="ln">5</span>        <span class="n">cache</span><span class="p">.</span><span class="n">getOrPut</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="p">{</span>
+<span class="ln">6</span>            <span class="n">cache</span><span class="p">.</span><span class="n">getOrPut</span><span class="p">(</span><span class="n">n</span> <span class="p">-</span> <span class="m">1</span><span class="p">)</span> <span class="p">{</span> <span class="n">fibCached</span><span class="p">(</span><span class="n">n</span> <span class="p">-</span> <span class="m">1</span><span class="p">,</span> <span class="n">cache</span><span class="p">)</span> <span class="p">}</span> <span class="p">+</span>
+<span class="ln">7</span>            <span class="n">cache</span><span class="p">.</span><span class="n">getOrPut</span><span class="p">(</span><span class="n">n</span> <span class="p">-</span> <span class="m">2</span><span class="p">)</span> <span class="p">{</span> <span class="n">fibCached</span><span class="p">(</span><span class="n">n</span> <span class="p">-</span> <span class="m">2</span><span class="p">,</span> <span class="n">cache</span><span class="p">)</span> <span class="p">}</span>
+<span class="ln">8</span>        <span class="p">}</span></code></pre></div>
 
 <p>This gives us over five orders of magnitude improvement over <code>fibNaive</code>.</p>
+
+<blockquote>
+<p>The initial implementation worked around Kotlin not understanding my intent, details are on <a href="https://stackoverflow.com/questions/49522945/kotlin-getorput-oddness">StackOverflow</a></p>
+</blockquote>
 
 <h2 id="fibvectorsum">FibVectorSum</h2>
 

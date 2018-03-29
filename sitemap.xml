@@ -8,6 +8,11 @@
   </url>
   
   <url>
+    <loc>https://sorokod.github.io/post/2015-02-05-slide/</loc>
+    <lastmod>2015-02-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://sorokod.github.io/page/about/</loc>
   </url>
   
@@ -42,6 +47,12 @@
   <url>
     <loc>https://sorokod.github.io/post/</loc>
     <lastmod>2018-03-16T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://sorokod.github.io/tags/random/</loc>
+    <lastmod>2015-02-05T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

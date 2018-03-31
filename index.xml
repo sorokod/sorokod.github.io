@@ -6,10 +6,26 @@
     <description>Recent content on magpie</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 16 Mar 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 31 Mar 2018 18:17:09 +0100</lastBuildDate>
     
 	<atom:link href="https://sorokod.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Kotlin Result</title>
+      <link>https://sorokod.github.io/post/2018-03-31-kotlin-result/</link>
+      <pubDate>Sat, 31 Mar 2018 18:17:09 +0100</pubDate>
+      
+      <guid>https://sorokod.github.io/post/2018-03-31-kotlin-result/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://sorokod.github.io/img/kotlin.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Some languages provide a facility to return an error from a call to method/function, along with the actual result value.
+This allows (or forces) the programmer to take into account potential runtime errors.&lt;/p&gt;
+
+&lt;p&gt;Something similar can be done in Kotlin.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Fibonacci</title>

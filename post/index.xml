@@ -41,6 +41,17 @@ This allows (or forces) the programmer to take into account potential runtime er
     </item>
     
     <item>
+      <title>Armstrong Numbers</title>
+      <link>https://sorokod.github.io/post/2016-03-01-armstrong-numbers/</link>
+      <pubDate>Tue, 01 Mar 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://sorokod.github.io/post/2016-03-01-armstrong-numbers/</guid>
+      <description>&lt;p&gt;An &lt;a href=&#34;https://en.wikipedia.org/wiki/Narcissistic_number&#34;&gt;Armstrong number&lt;/a&gt; is &amp;ldquo;&lt;em&gt;a number that is the sum of its own digits each raised to the power of the number of digits&lt;/em&gt;&amp;ldquo;&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>Slide</title>
       <link>https://sorokod.github.io/post/2015-02-05-slide/</link>
       <pubDate>Thu, 05 Feb 2015 00:00:00 +0000</pubDate>

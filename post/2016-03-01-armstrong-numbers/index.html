@@ -5,22 +5,28 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-  <title>Slide</title>
-  <meta property="og:title" content="Slide" />
-  <meta name="twitter:title" content="Slide" />
-  <meta name="description" content="Högertrafikomläggningen">
-  <meta property="og:description" content="Högertrafikomläggningen">
-  <meta name="twitter:description" content="Högertrafikomläggningen">
+  <title>Armstrong Numbers</title>
+  <meta property="og:title" content="Armstrong Numbers" />
+  <meta name="twitter:title" content="Armstrong Numbers" />
+  <meta name="description" content="An Armstrong number is &ldquo;a number that is the sum of its own digits each raised to the power of the number of digits&ldquo;
+
+">
+  <meta property="og:description" content="An Armstrong number is &ldquo;a number that is the sum of its own digits each raised to the power of the number of digits&ldquo;
+
+">
+  <meta name="twitter:description" content="An Armstrong number is &ldquo;a number that is the sum of its own digits each raised to the power of the number of digits&ldquo;
+
+">
   <meta name="author" content="David Soroko"/>
   <meta property="og:image" content="https://sorokod.github.io/img/magpie.png" />
   <meta name="twitter:image" content="https://sorokod.github.io/img/magpie.png" />
   <meta name="twitter:card" content="summary" />
-  <meta property="og:url" content="https://sorokod.github.io/post/2015-02-05-slide/" />
+  <meta property="og:url" content="https://sorokod.github.io/post/2016-03-01-armstrong-numbers/" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="magpie" />
 
   <meta name="generator" content="Hugo 0.37.1" />
-  <link rel="canonical" href="https://sorokod.github.io/post/2015-02-05-slide/" />
+  <link rel="canonical" href="https://sorokod.github.io/post/2016-03-01-armstrong-numbers/" />
   <link rel="alternate" href="https://sorokod.github.io/index.xml" type="application/rss+xml" title="magpie">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
@@ -156,17 +162,13 @@
         <div class="row">
           <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
             <div class="post-heading">
-              <h1>Slide</h1>
-                
-                  
-                    <h2 class="post-subheading">Högertrafikomläggningen</h2>
-                  
+              <h1>Armstrong Numbers</h1>
                 
                 
                   <span class="post-meta">
   
   
-  <i class="fa fa-calendar-o"></i>&nbsp;Posted on February 5, 2015
+  <i class="fa fa-calendar-o"></i>&nbsp;Posted on March 1, 2016
   
   
   
@@ -187,20 +189,94 @@
   <div class="row">
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
       <article role="main" class="blog-post">
-        <p><img src="/img/800px-Kungsgatan_1967.jpg" alt="Kungsgatan" /></p>
+        <p>An <a href="https://en.wikipedia.org/wiki/Narcissistic_number">Armstrong number</a> is &ldquo;<em>a number that is the sum of its own digits each raised to the power of the number of digits</em>&ldquo;</p>
 
 <p></p>
 
-<p>There is a technical presentation, just waiting to be written, in which this will be the
-<a href="https://en.wikipedia.org/wiki/Dagen_H">first slide</a>.</p>
+<p>For example, <code>8208</code> is an Armstrong number because <code>8208 = 8^4 + 2^4 + 0^4 + 8^4</code>. We will say that <code>8208</code> is a <strong>level-4</strong> number and call the power sum of its digits, an <strong>a-sum</strong>. Single digit
+numbers are obviously (<strong>level-1</strong>) Armstrong numbers , all Armstrong numbers up to level 4 are:</p>
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>level-1</td>
+<td><code>1 2 3 4 5 6 7 8 9</code></td>
+</tr>
+
+<tr>
+<td>level-3</td>
+<td><code>153 370 371 407</code></td>
+</tr>
+
+<tr>
+<td>level-4</td>
+<td><code>1634 8208 9474</code></td>
+</tr>
+</tbody>
+</table>
+
+<p>There is a finite number of Armstrong numbers, this is because the magnitude of a number grows quicker then it&rsquo;s <strong>a-sum</strong> so that after certain point, the <strong>a-sum</strong> falls behind. The largest Armstrong number is
+a level-39ner.</p>
+
+<p><a href="https://github.com/sorokod/Armstrong">This code</a> calculates all Armstrong numbers up to level-39 with the following timings:</p>
+<div class="highlight"><pre class="chroma">  Level-15 0  sec.   41 numbers
+  Level-18 2  sec.   46 numbers
+  Level-20 6  sec.   51 numbers
+  Level-21 11 sec.   53 numbers
+  Level-22 15 sec    53 numbers
+  Level-23 21 sec.   58 numbers
+  Level-25 46 sec    66 numbers
+  Level-39 3518 sec. (58 min) 88 numbers
+
+  (on i7-4790K CPU @ 4.00GHz)</pre></div>
+<p><br/></p>
+
+<h4 id="optimizations">Optimizations</h4>
+
+<p>The following optimizations, listed in the order of their impact, are used.</p>
+
+<ul>
+<li><p>A neat insight from this <a href="http://stackoverflow.com/questions/35487030/java-fast-way-to-check-if-digits-in-int-are-in-ascending-order">stackoverflow discussion</a>, is best demonstrated by an example.
+Looking at <code>8208 = aSum(8208) = 8^4 + 2^4 + 0^4 + 8^4</code>, it is clear that the value of <strong>a-sum</strong> doesn&rsquo;t
+depend on the order of the digits. In other words, all numbers comprised of the digits {0,2,8,8}
+will have the same <strong>a-sum</strong>. For any <strong>representative</strong> N from the set of numbers comprised of digits
+{0,2,8,8}, N is A-number if and only if <code>a-sum(N) = a-sum(a-sum(N))</code>. Therefore, generally, we don&rsquo;t need to
+examine all numbers up to a given <code>level</code> but only one representative from every multiset of digits.
+This reduces the search space from <code>10^39</code> to about <code>10^10</code>.</p></li>
+
+<li><p>It doesn&rsquo;t really matter which representative we pick, the one with digits in descending order is
+reasonably easy to work with, e.g. the representative of <code>{0,2,8,8}</code> is <code>8820</code>. Instead of filtering
+all <code>10^39</code> values for representatives, the code builds and discards the representatives dynamically
+so that only relevant values are examined with modest memory requirement ( <a href="https://github.com/sorokod/Armstrong/blob/master/TREE.md">a bit more about that tree</a> ).</p></li>
+
+<li><p>Obviously the problem can be broken down into parts that can be executed in parallel.</p></li>
+
+<li><p>Datatypes. The representatives are modeled as byte arrays so that <code>8820</code> is <code>byte[] {8,8,2,0}</code>
+( <code>BigInteger</code>s are used to calculate <strong>a-sum</strong>s ).</p></li>
+
+<li><p>Various. For the calculation of <strong>a-sum</strong>s the powers of <code>{1..9}</code> are precomputed and cached.
+Instead of checking that <code>a-sum(N) = a-sum(a-sum(N))</code> it is cheaper to verify that <code>a-sum(N)</code> is a permutation
+of the digits of <code>N</code> which saves us an extra call to <code>a-sum</code>.</p></li>
+</ul>
       </article>
 
       
         <ul class="pager blog-pager">
           
+            <li class="previous">
+              <a href="https://sorokod.github.io/post/2015-02-05-slide/" data-toggle="tooltip" data-placement="top" title="Slide">&larr; Previous Post</a>
+            </li>
+          
           
             <li class="next">
-              <a href="https://sorokod.github.io/post/2016-03-01-armstrong-numbers/" data-toggle="tooltip" data-placement="top" title="Armstrong Numbers">Next Post &rarr;</a>
+              <a href="https://sorokod.github.io/post/2018-03-16-fibonacci/" data-toggle="tooltip" data-placement="top" title="Fibonacci">Next Post &rarr;</a>
             </li>
           
         </ul>

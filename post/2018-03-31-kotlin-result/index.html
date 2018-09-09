@@ -36,7 +36,7 @@ This allows (or forces) the programmer to take into account potential runtime â€
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="magpie" />
 
-  <meta name="generator" content="Hugo 0.37.1" />
+  <meta name="generator" content="Hugo 0.48" />
   <link rel="canonical" href="https://sorokod.github.io/post/2018-03-31-kotlin-result/" />
   <link rel="alternate" href="https://sorokod.github.io/index.xml" type="application/rss+xml" title="magpie">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
@@ -225,7 +225,8 @@ This allows (or forces) the programmer to take into account potential runtime er
 </span><span class="w"></span><span class="k">match</span><span class="w"> </span><span class="n">a_result</span><span class="w"> </span><span class="p">{</span><span class="w">
 </span><span class="w">    </span><span class="nb">Ok</span><span class="p">(</span><span class="n">v</span><span class="p">)</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="p">...,</span><span class="w"> </span><span class="c1">// deal with the value
 </span><span class="c1"></span><span class="w">    </span><span class="nb">Err</span><span class="p">(</span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="p">...,</span><span class="c1">// handle error
-</span><span class="c1"></span><span class="p">}</span></code></pre></div></p>
+</span><span class="c1"></span><span class="p">}</span><span class="w">
+</span><span class="w"></span></code></pre></div></p>
 
 <p>Kotlin&rsquo;s take on enums are <a href="https://kotlinlang.org/docs/reference/sealed-classes.html">sealed classes</a> and the definition
 looks quite similar:
@@ -270,7 +271,7 @@ to deal with this case.</p>
 <p>In the context of this post, it is more natural to incorporate the lack of value into the result
 object. We replace <code>Ok</code> with <code>None</code> and <code>Some</code>:</p>
 
-<p><div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="k">package</span> <span class="nn">optionalresult</span>
+<div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="k">package</span> <span class="nn">optionalresult</span>
 
 <span class="k">import</span> <span class="nn">optionalresult.OptionalResult.*</span>
 
@@ -278,7 +279,7 @@ object. We replace <code>Ok</code> with <code>None</code> and <code>Some</code>:
     <span class="k">object</span> <span class="nc">None</span> <span class="p">:</span> <span class="n">OptionalResult</span><span class="p">&lt;</span><span class="n">Nothing</span><span class="p">&gt;()</span>
     <span class="k">data</span> <span class="k">class</span> <span class="nc">Some</span><span class="p">&lt;</span><span class="k">out</span> <span class="n">T</span><span class="p">&gt;(</span><span class="k">val</span> <span class="py">value</span><span class="p">:</span> <span class="n">T</span><span class="p">)</span> <span class="p">:</span> <span class="n">OptionalResult</span><span class="p">&lt;</span><span class="n">T</span><span class="p">&gt;()</span>
     <span class="k">data</span> <span class="k">class</span> <span class="nc">Err</span><span class="p">(</span><span class="k">val</span> <span class="py">exception</span><span class="p">:</span> <span class="n">Exception</span> <span class="p">=</span> <span class="n">RuntimeException</span><span class="p">(),</span> <span class="k">val</span> <span class="py">msg</span><span class="p">:</span> <span class="n">String</span> <span class="p">=</span> <span class="s">&#34;&#34;</span><span class="p">)</span> <span class="p">:</span> <span class="n">OptionalResult</span><span class="p">&lt;</span><span class="n">Nothing</span><span class="p">&gt;()</span>
-<span class="p">}</span></code></pre></div></p>
+<span class="p">}</span></code></pre></div>
 
 <p>In this case the test drive looks like this:
 <div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="k">fun</span> <span class="nf">query</span><span class="p">(</span><span class="n">id</span><span class="p">:</span> <span class="n">Int</span><span class="p">):</span> <span class="n">OptionalResult</span><span class="p">&lt;</span><span class="n">String</span><span class="p">&gt;</span> <span class="p">=</span> <span class="k">when</span> <span class="p">(</span><span class="n">id</span><span class="p">)</span> <span class="p">{</span>
@@ -302,7 +303,7 @@ object. We replace <code>Ok</code> with <code>None</code> and <code>Some</code>:
 an <code>expect()</code> method to <code>OptionalResult</code>. This may be useful if we want to fail without much ceremony when we are expecting
 a result value to be available (in a unit test for example).</p>
 
-<p><div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="k">sealed</span> <span class="k">class</span> <span class="nc">OptionalResult</span><span class="p">&lt;</span><span class="k">out</span> <span class="n">T</span><span class="p">&gt;</span> <span class="p">{</span>
+<div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="k">sealed</span> <span class="k">class</span> <span class="nc">OptionalResult</span><span class="p">&lt;</span><span class="k">out</span> <span class="n">T</span><span class="p">&gt;</span> <span class="p">{</span>
     <span class="k">object</span> <span class="nc">None</span> <span class="p">:</span> <span class="n">OptionalResult</span><span class="p">&lt;</span><span class="n">Nothing</span><span class="p">&gt;()</span>
     <span class="k">data</span> <span class="k">class</span> <span class="nc">Some</span><span class="p">&lt;</span><span class="k">out</span> <span class="n">T</span><span class="p">&gt;(</span><span class="k">val</span> <span class="py">value</span><span class="p">:</span> <span class="n">T</span><span class="p">)</span> <span class="p">:</span> <span class="n">OptionalResult</span><span class="p">&lt;</span><span class="n">T</span><span class="p">&gt;()</span>
     <span class="k">data</span> <span class="k">class</span> <span class="nc">Err</span><span class="p">(</span><span class="k">val</span> <span class="py">exception</span><span class="p">:</span> <span class="n">Exception</span> <span class="p">=</span> <span class="n">RuntimeException</span><span class="p">(),</span> <span class="k">val</span> <span class="py">msg</span><span class="p">:</span> <span class="n">String</span> <span class="p">=</span> <span class="s">&#34;&#34;</span><span class="p">)</span> <span class="p">:</span> <span class="n">OptionalResult</span><span class="p">&lt;</span><span class="n">Nothing</span><span class="p">&gt;()</span>
@@ -321,7 +322,7 @@ a result value to be available (in a unit test for example).</p>
 </span><span class="c1"></span>
 <span class="n">v</span> <span class="p">=</span>  <span class="n">Err</span><span class="p">().</span><span class="k">expect</span><span class="p">(</span><span class="s">&#34;expected: a result&#34;</span><span class="p">)</span> <span class="c1">// IllegalStateException: expected a result
 </span><span class="c1"></span>
-<span class="n">v</span> <span class="p">=</span> <span class="n">Some</span><span class="p">(</span><span class="s">&#34;a result&#34;</span><span class="p">).</span><span class="k">expect</span><span class="p">(</span><span class="s">&#34;expected: a result&#34;</span><span class="p">)</span> <span class="c1">// v has the value &#34;a result&#34;</span></code></pre></div></p>
+<span class="n">v</span> <span class="p">=</span> <span class="n">Some</span><span class="p">(</span><span class="s">&#34;a result&#34;</span><span class="p">).</span><span class="k">expect</span><span class="p">(</span><span class="s">&#34;expected: a result&#34;</span><span class="p">)</span> <span class="c1">// v has the value &#34;a result&#34;</span></code></pre></div>
       </article>
 
       
@@ -331,6 +332,10 @@ a result value to be available (in a unit test for example).</p>
               <a href="https://sorokod.github.io/post/2018-03-16-fibonacci/" data-toggle="tooltip" data-placement="top" title="Fibonacci">&larr; Previous Post</a>
             </li>
           
+          
+            <li class="next">
+              <a href="https://sorokod.github.io/post/2018-09-09-kotlin-functions-as-objects/" data-toggle="tooltip" data-placement="top" title="Kotlin - functions are objects">Next Post &rarr;</a>
+            </li>
           
         </ul>
       

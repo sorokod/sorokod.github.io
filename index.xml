@@ -6,10 +6,24 @@
     <description>Recent content on magpie</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 31 Mar 2018 18:17:09 +0100</lastBuildDate>
+    <lastBuildDate>Sun, 09 Sep 2018 18:00:01 +0100</lastBuildDate>
     
 	<atom:link href="https://sorokod.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Kotlin - functions are objects</title>
+      <link>https://sorokod.github.io/post/2018-09-09-kotlin-functions-as-objects/</link>
+      <pubDate>Sun, 09 Sep 2018 18:00:01 +0100</pubDate>
+      
+      <guid>https://sorokod.github.io/post/2018-09-09-kotlin-functions-as-objects/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://sorokod.github.io/img/kotlin.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Sometimes it is useful to look at a subject from a slightly different perspective, this provides a sort of mental
+&lt;a href=&#34;https://en.wikipedia.org/wiki/Binocular_vision&#34;&gt;&amp;ldquo;binocular vision&amp;rdquo;&lt;/a&gt; and allows to flesh out some details that are less obvious otherwise.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Kotlin Result</title>

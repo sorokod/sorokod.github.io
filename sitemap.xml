@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://sorokod.github.io/post/2018-09-09-kotlin-functions-as-objects/</loc>
+    <lastmod>2018-09-09T18:00:01+01:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://sorokod.github.io/post/2018-03-31-kotlin-result/</loc>
     <lastmod>2018-03-31T18:17:09+01:00</lastmod>
   </url>
@@ -51,7 +56,7 @@
   
   <url>
     <loc>https://sorokod.github.io/tags/kotlin/</loc>
-    <lastmod>2018-03-31T18:17:09+01:00</lastmod>
+    <lastmod>2018-09-09T18:00:01+01:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -62,7 +67,7 @@
   
   <url>
     <loc>https://sorokod.github.io/post/</loc>
-    <lastmod>2018-03-31T18:17:09+01:00</lastmod>
+    <lastmod>2018-09-09T18:00:01+01:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -80,7 +85,7 @@
   
   <url>
     <loc>https://sorokod.github.io/</loc>
-    <lastmod>2018-03-31T18:17:09+01:00</lastmod>
+    <lastmod>2018-09-09T18:00:01+01:00</lastmod>
     <priority>0</priority>
   </url>
   

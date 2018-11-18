@@ -8,15 +8,9 @@
   <title>Armstrong Numbers</title>
   <meta property="og:title" content="Armstrong Numbers" />
   <meta name="twitter:title" content="Armstrong Numbers" />
-  <meta name="description" content="An Armstrong number is &ldquo;a number that is the sum of its own digits each raised to the power of the number of digits&ldquo;
-
-">
-  <meta property="og:description" content="An Armstrong number is &ldquo;a number that is the sum of its own digits each raised to the power of the number of digits&ldquo;
-
-">
-  <meta name="twitter:description" content="An Armstrong number is &ldquo;a number that is the sum of its own digits each raised to the power of the number of digits&ldquo;
-
-">
+  <meta name="description" content="An Armstrong number is &ldquo;a number that is the sum of its own digits each raised to the power of the number of digits&ldquo;">
+  <meta property="og:description" content="An Armstrong number is &ldquo;a number that is the sum of its own digits each raised to the power of the number of digits&ldquo;">
+  <meta name="twitter:description" content="An Armstrong number is &ldquo;a number that is the sum of its own digits each raised to the power of the number of digits&ldquo;">
   <meta name="author" content="David Soroko"/>
   <meta property="og:image" content="https://sorokod.github.io/img/magpie.png" />
   <meta name="twitter:image" content="https://sorokod.github.io/img/magpie.png" />
@@ -25,7 +19,7 @@
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="magpie" />
 
-  <meta name="generator" content="Hugo 0.48" />
+  <meta name="generator" content="Hugo 0.51" />
   <link rel="canonical" href="https://sorokod.github.io/post/2016-03-01-armstrong-numbers/" />
   <link rel="alternate" href="https://sorokod.github.io/index.xml" type="application/rss+xml" title="magpie">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
@@ -191,8 +185,6 @@
       <article role="main" class="blog-post">
         <p>An <a href="https://en.wikipedia.org/wiki/Narcissistic_number">Armstrong number</a> is &ldquo;<em>a number that is the sum of its own digits each raised to the power of the number of digits</em>&ldquo;</p>
 
-<p></p>
-
 <p>For example, <code>8208</code> is an Armstrong number because <code>8208 = 8^4 + 2^4 + 0^4 + 8^4</code>. We will say that <code>8208</code> is a <strong>level-4</strong> number and call the power sum of its digits, an <strong>a-sum</strong>. Single digit
 numbers are obviously (<strong>level-1</strong>) Armstrong numbers , all Armstrong numbers up to level 4 are:</p>
 
@@ -226,7 +218,8 @@ numbers are obviously (<strong>level-1</strong>) Armstrong numbers , all Armstro
 a level-39ner.</p>
 
 <p><a href="https://github.com/sorokod/Armstrong">This code</a> calculates all Armstrong numbers up to level-39 with the following timings:</p>
-<div class="highlight"><pre class="chroma">  Level-15 0  sec.   41 numbers
+
+<pre><code>  Level-15 0  sec.   41 numbers
   Level-18 2  sec.   46 numbers
   Level-20 6  sec.   51 numbers
   Level-21 11 sec.   53 numbers
@@ -235,7 +228,10 @@ a level-39ner.</p>
   Level-25 46 sec    66 numbers
   Level-39 3518 sec. (58 min) 88 numbers
 
-  (on i7-4790K CPU @ 4.00GHz)</pre></div>
+  (on i7-4790K CPU @ 4.00GHz)
+
+</code></pre>
+
 <p><br/></p>
 
 <h4 id="optimizations">Optimizations</h4>

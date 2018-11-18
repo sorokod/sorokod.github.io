@@ -11,15 +11,11 @@
   <meta name="description" content="
 
 Sometimes it is useful to look at a subject from a slightly different perspective, this provides a sort of mental
-&ldquo;binocular vision&rdquo; and allows to flesh out some details that are less obvious otherwise.
-
-">
+&ldquo;binocular vision&rdquo; and allows to flesh out some details that are less obvious otherwise.">
   <meta property="og:description" content="
 
 Sometimes it is useful to look at a subject from a slightly different perspective, this provides a sort of mental
-&ldquo;binocular vision&rdquo; and allows to flesh out some details that are less obvious otherwise.
-
-">
+&ldquo;binocular vision&rdquo; and allows to flesh out some details that are less obvious otherwise.">
   <meta name="twitter:description" content="
 
 Sometimes it is useful to look at a subject from a slightly different perspective, this provides a sort of mental
@@ -32,7 +28,7 @@ Sometimes it is useful to look at a subject from a slightly different perspectiv
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="magpie" />
 
-  <meta name="generator" content="Hugo 0.48" />
+  <meta name="generator" content="Hugo 0.51" />
   <link rel="canonical" href="https://sorokod.github.io/post/2018-09-09-kotlin-functions-as-objects/" />
   <link rel="alternate" href="https://sorokod.github.io/index.xml" type="application/rss+xml" title="magpie">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
@@ -201,8 +197,6 @@ Sometimes it is useful to look at a subject from a slightly different perspectiv
 <p>Sometimes it is useful to look at a subject from a slightly different perspective, this provides a sort of mental
 <a href="https://en.wikipedia.org/wiki/Binocular_vision">&ldquo;binocular vision&rdquo;</a> and allows to flesh out some details that are less obvious otherwise.</p>
 
-<p></p>
-
 <p><em><strong>Pica</strong></em>: A function is an implementation of the <a href="https://github.com/JetBrains/kotlin/blob/1.2.70/core/builtins/src/kotlin/Function.kt"><code>Function</code></a> interface and more specifically, <strong>on the JVM</strong>, an implementation
 of <code>Function[n]</code> interface where n is in <code>{0..22}</code> ( <a href="https://github.com/JetBrains/kotlin/blob/1.2.70/libraries/stdlib/jvm/runtime/kotlin/jvm/functions/Functions.kt">source on Github</a> ). For example, <code>Function1</code> is defined as:</p>
 
@@ -260,9 +254,9 @@ multiplies it&rsquo;s parameter by two?</p>
 define a function with 23 parameters?</p>
 
 <p><em><strong>Pica</strong></em>: Let&rsquo;s see</p>
-<div class="highlight"><pre class="chroma">fun f23(p1:Int,.., p23:Int) = &#34;&#34;</pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="k">fun</span> <span class="nf">f23</span><span class="p">(</span><span class="n">p1</span><span class="p">:</span><span class="n">Int</span><span class="p">,..,</span> <span class="n">p23</span><span class="p">:</span><span class="n">Int</span><span class="p">)</span> <span class="p">=</span> <span class="s">&#34;&#34;</span></code></pre></div>
 <p>a call to <code>::f23</code> results in a runtime exception:</p>
-<div class="highlight"><pre class="chroma">java.lang.NoClassDefFoundError: kotlin/Function23      </pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="n">java</span><span class="p">.</span><span class="n">lang</span><span class="p">.</span><span class="n">NoClassDefFoundError</span><span class="p">:</span> <span class="n">kotlin</span><span class="p">/</span><span class="n">Function23</span>      </code></pre></div>
 <p>This is in Kotlin v. 1.2.60 - there is a development goal to <a href="https://github.com/JetBrains/kotlin/blob/1.3-M2/spec-docs/function-types.md"><em>Get rid of 23 hardwired physical function classes</em></a>.</p>
 
 <p><em><strong>Elster</strong></em>: hmm&hellip; ok, this nice and all but what is the point of this exercise?</p>
@@ -336,6 +330,10 @@ maps directly to the functional (SAM) interface <code>Function[n]&lt;T1,T2,..,Tn
               <a href="https://sorokod.github.io/post/2018-03-31-kotlin-result/" data-toggle="tooltip" data-placement="top" title="Kotlin Result">&larr; Previous Post</a>
             </li>
           
+          
+            <li class="next">
+              <a href="https://sorokod.github.io/post/2018-11-17-the-foreach-api/" data-toggle="tooltip" data-placement="top" title="The forEach API">Next Post &rarr;</a>
+            </li>
           
         </ul>
       

@@ -1,38 +1,160 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
   <head>
+    
+
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-  <title>Armstrong Numbers</title>
-  <meta property="og:title" content="Armstrong Numbers" />
+  <title>Armstrong Numbers - magpie</title>
+  <meta name="description" content="An Armstrong number is &ldquo;a number that is the sum of its own digits each raised to the power of the number of digits&rdquo;">
+  <meta name="author" content="David Soroko"/><script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "magpie",
+    
+    "url": "https:\/\/sorokod.github.io\/"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "https:\/\/sorokod.github.io\/"
+  
+  
+  
+  
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https:\/\/sorokod.github.io\/",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "https:\/\/sorokod.github.io\/post\/2016-03-01-armstrong-numbers\/",
+          "name": "Armstrong numbers"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : "David Soroko"
+  },
+  "headline": "Armstrong Numbers",
+  "description" : "An Armstrong number is \u0026ldquo;a number that is the sum of its own digits each raised to the power of the number of digits\u0026rdquo;\n",
+  "inLanguage" : "en",
+  "wordCount":  462 ,
+  "datePublished" : "2016-03-01T00:00:00",
+  "dateModified" : "2016-03-01T00:00:00",
+  "image" : "https:\/\/sorokod.github.io\/img\/magpie.png",
+  "keywords" : [ "java" ],
+  "mainEntityOfPage" : "https:\/\/sorokod.github.io\/post\/2016-03-01-armstrong-numbers\/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "https:\/\/sorokod.github.io\/",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "https:\/\/sorokod.github.io\/img\/magpie.png",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
+
+<meta property="og:title" content="Armstrong Numbers" />
+<meta property="og:description" content="An Armstrong number is &ldquo;a number that is the sum of its own digits each raised to the power of the number of digits&rdquo;">
+<meta property="og:image" content="https://sorokod.github.io/img/magpie.png" />
+<meta property="og:url" content="https://sorokod.github.io/post/2016-03-01-armstrong-numbers/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="magpie" />
+
   <meta name="twitter:title" content="Armstrong Numbers" />
-  <meta name="description" content="An Armstrong number is &ldquo;a number that is the sum of its own digits each raised to the power of the number of digits&ldquo;">
-  <meta property="og:description" content="An Armstrong number is &ldquo;a number that is the sum of its own digits each raised to the power of the number of digits&ldquo;">
-  <meta name="twitter:description" content="An Armstrong number is &ldquo;a number that is the sum of its own digits each raised to the power of the number of digits&ldquo;">
-  <meta name="author" content="David Soroko"/>
-  <meta property="og:image" content="https://sorokod.github.io/img/magpie.png" />
+  <meta name="twitter:description" content="An Armstrong number is &ldquo;a number that is the sum of its own digits each raised to the power of the number of digits&rdquo;">
   <meta name="twitter:image" content="https://sorokod.github.io/img/magpie.png" />
-  <meta name="twitter:card" content="summary" />
-  <meta property="og:url" content="https://sorokod.github.io/post/2016-03-01-armstrong-numbers/" />
-  <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="magpie" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="generator" content="Hugo 0.104.2" />
+  <link rel="alternate" href="https://sorokod.github.io/index.xml" type="application/rss+xml" title="magpie"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://sorokod.github.io/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" /><link rel="stylesheet" href="https://sorokod.github.io/css/syntax.css" /><link rel="stylesheet" href="https://sorokod.github.io/css/codeblock.css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css" integrity="sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css" integrity="sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R" crossorigin="anonymous">
 
-  <meta name="generator" content="Hugo 0.51" />
-  <link rel="canonical" href="https://sorokod.github.io/post/2016-03-01-armstrong-numbers/" />
-  <link rel="alternate" href="https://sorokod.github.io/index.xml" type="application/rss+xml" title="magpie">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://sorokod.github.io/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" /><link rel="stylesheet" href="https://sorokod.github.io/css/syntax.css" /><link rel="stylesheet" href="https://sorokod.github.io/css/codeblock.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://sorokod.github.io/">magpie</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li>
+              <a title="Blog" href="/">Blog</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="About" href="/page/about/">About</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Tags" href="/tags">Tags</a>
+            </li>
+          
+        
+
+        
+
+        
+      </ul>
+    </div>
+
+    
+      <div class="avatar-container">
+        <div class="avatar-img-border">
+          <a title="magpie" href="https://sorokod.github.io/">
+            <img class="avatar-img" src="https://sorokod.github.io/img/magpie.png" alt="magpie" />
+          </a>
+        </div>
+      </div>
+    
+
+  </div>
+</nav>
 
 
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css" integrity="sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh" crossorigin="anonymous">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css" integrity="sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R" crossorigin="anonymous">
 
+    
 
 
 <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
@@ -79,69 +201,12 @@
     </div>
 </div>
 
-</head>
 
-  <body>
-    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="https://sorokod.github.io/">magpie</a>
-    </div>
-
-    <div class="collapse navbar-collapse" id="main-navbar">
-      <ul class="nav navbar-nav navbar-right">
-        
-          
-            <li>
-              <a title="Blog" href="/">Blog</a>
-            </li>
-          
-        
-          
-            <li>
-              <a title="About" href="/page/about/">About</a>
-            </li>
-          
-        
-          
-            <li>
-              <a title="Tags" href="/tags">Tags</a>
-            </li>
-          
-        
-
-        
-
-        
-      </ul>
-    </div>
-
-    <div class="avatar-container">
-      <div class="avatar-img-border">
-        
-          <a title="magpie" href="https://sorokod.github.io/">
-            <img class="avatar-img" src="https://sorokod.github.io/img/magpie.png" alt="magpie" />
-          </a>
-        
-      </div>
-    </div>
-
-  </div>
-</nav>
-
-
-
-
-    
   
   
   
+
+
 
 
 
@@ -150,31 +215,41 @@
 
   <header class="header-section ">
     
+    
     <div class="intro-header no-img">
-      
       <div class="container">
         <div class="row">
           <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
             <div class="post-heading">
-              <h1>Armstrong Numbers</h1>
-                
-                
-                  <span class="post-meta">
+              
+                <h1>Armstrong Numbers</h1>
+              
+              
+              
+              
+                <span class="post-meta">
   
   
-  <i class="fa fa-calendar-o"></i>&nbsp;Posted on March 1, 2016
+  <i class="fas fa-calendar"></i>&nbsp;Posted on March 1, 2016
   
+  
+  
+  
+    
+      &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;David Soroko
+    
   
   
 </span>
 
 
-                
+              
             </div>
           </div>
         </div>
       </div>
     </div>
+  
   </header>
 
 
@@ -183,11 +258,9 @@
   <div class="row">
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
       <article role="main" class="blog-post">
-        <p>An <a href="https://en.wikipedia.org/wiki/Narcissistic_number">Armstrong number</a> is &ldquo;<em>a number that is the sum of its own digits each raised to the power of the number of digits</em>&ldquo;</p>
-
+        <p>An <a href="https://en.wikipedia.org/wiki/Narcissistic_number">Armstrong number</a> is &ldquo;<em>a number that is the sum of its own digits each raised to the power of the number of digits</em>&rdquo;</p>
 <p>For example, <code>8208</code> is an Armstrong number because <code>8208 = 8^4 + 2^4 + 0^4 + 8^4</code>. We will say that <code>8208</code> is a <strong>level-4</strong> number and call the power sum of its digits, an <strong>a-sum</strong>. Single digit
 numbers are obviously (<strong>level-1</strong>) Armstrong numbers , all Armstrong numbers up to level 4 are:</p>
-
 <table>
 <thead>
 <tr>
@@ -195,31 +268,25 @@ numbers are obviously (<strong>level-1</strong>) Armstrong numbers , all Armstro
 <th></th>
 </tr>
 </thead>
-
 <tbody>
 <tr>
 <td>level-1</td>
 <td><code>1 2 3 4 5 6 7 8 9</code></td>
 </tr>
-
 <tr>
 <td>level-3</td>
 <td><code>153 370 371 407</code></td>
 </tr>
-
 <tr>
 <td>level-4</td>
 <td><code>1634 8208 9474</code></td>
 </tr>
 </tbody>
 </table>
-
 <p>There is a finite number of Armstrong numbers, this is because the magnitude of a number grows quicker then it&rsquo;s <strong>a-sum</strong> so that after certain point, the <strong>a-sum</strong> falls behind. The largest Armstrong number is
 a level-39ner.</p>
-
 <p><a href="https://github.com/sorokod/Armstrong">This code</a> calculates all Armstrong numbers up to level-39 with the following timings:</p>
-
-<pre><code>  Level-15 0  sec.   41 numbers
+<pre tabindex="0"><code>  Level-15 0  sec.   41 numbers
   Level-18 2  sec.   46 numbers
   Level-20 6  sec.   51 numbers
   Level-21 11 sec.   53 numbers
@@ -229,38 +296,49 @@ a level-39ner.</p>
   Level-39 3518 sec. (58 min) 88 numbers
 
   (on i7-4790K CPU @ 4.00GHz)
-
-</code></pre>
-
-<p><br/></p>
-
-<h4 id="optimizations">Optimizations</h4>
-
+</code></pre><!-- raw HTML omitted -->
 <p>The following optimizations, listed in the order of their impact, are used.</p>
-
 <ul>
-<li><p>A neat insight from this <a href="http://stackoverflow.com/questions/35487030/java-fast-way-to-check-if-digits-in-int-are-in-ascending-order">stackoverflow discussion</a>, is best demonstrated by an example.
+<li>
+<p>A neat insight from this <a href="http://stackoverflow.com/questions/35487030/java-fast-way-to-check-if-digits-in-int-are-in-ascending-order">stackoverflow discussion</a>, is best demonstrated by an example.
 Looking at <code>8208 = aSum(8208) = 8^4 + 2^4 + 0^4 + 8^4</code>, it is clear that the value of <strong>a-sum</strong> doesn&rsquo;t
 depend on the order of the digits. In other words, all numbers comprised of the digits {0,2,8,8}
 will have the same <strong>a-sum</strong>. For any <strong>representative</strong> N from the set of numbers comprised of digits
 {0,2,8,8}, N is A-number if and only if <code>a-sum(N) = a-sum(a-sum(N))</code>. Therefore, generally, we don&rsquo;t need to
 examine all numbers up to a given <code>level</code> but only one representative from every multiset of digits.
-This reduces the search space from <code>10^39</code> to about <code>10^10</code>.</p></li>
-
-<li><p>It doesn&rsquo;t really matter which representative we pick, the one with digits in descending order is
+This reduces the search space from <code>10^39</code> to about <code>10^10</code>.</p>
+</li>
+<li>
+<p>It doesn&rsquo;t really matter which representative we pick, the one with digits in descending order is
 reasonably easy to work with, e.g. the representative of <code>{0,2,8,8}</code> is <code>8820</code>. Instead of filtering
 all <code>10^39</code> values for representatives, the code builds and discards the representatives dynamically
-so that only relevant values are examined with modest memory requirement ( <a href="https://github.com/sorokod/Armstrong/blob/master/TREE.md">a bit more about that tree</a> ).</p></li>
-
-<li><p>Obviously the problem can be broken down into parts that can be executed in parallel.</p></li>
-
-<li><p>Datatypes. The representatives are modeled as byte arrays so that <code>8820</code> is <code>byte[] {8,8,2,0}</code>
-( <code>BigInteger</code>s are used to calculate <strong>a-sum</strong>s ).</p></li>
-
-<li><p>Various. For the calculation of <strong>a-sum</strong>s the powers of <code>{1..9}</code> are precomputed and cached.
+so that only relevant values are examined with modest memory requirement ( <a href="https://github.com/sorokod/Armstrong/blob/master/TREE.md">a bit more about that tree</a> ).</p>
+</li>
+<li>
+<p>Obviously the problem can be broken down into parts that can be executed in parallel.</p>
+</li>
+<li>
+<p>Datatypes. The representatives are modeled as byte arrays so that <code>8820</code> is <code>byte[] {8,8,2,0}</code>
+( <code>BigInteger</code>s are used to calculate <strong>a-sum</strong>s ).</p>
+</li>
+<li>
+<p>Various. For the calculation of <strong>a-sum</strong>s the powers of <code>{1..9}</code> are precomputed and cached.
 Instead of checking that <code>a-sum(N) = a-sum(a-sum(N))</code> it is cheaper to verify that <code>a-sum(N)</code> is a permutation
-of the digits of <code>N</code> which saves us an extra call to <code>a-sum</code>.</p></li>
+of the digits of <code>N</code> which saves us an extra call to <code>a-sum</code>.</p>
+</li>
 </ul>
+
+        
+          <div class="blog-tags">
+            
+              <a href="https://sorokod.github.io//tags/java/">java</a>&nbsp;
+            
+          </div>
+        
+
+        
+
+        
       </article>
 
       
@@ -285,17 +363,20 @@ of the digits of <code>N</code> which saves us an extra call to <code>a-sum</cod
   </div>
 </div>
 
-    <footer>
+      
+<footer>
   <div class="container">
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
         <ul class="list-inline text-center footer-links">
           
               <li>
-                <a href="https://stackoverflow.com/users/239101/david-soroko" title="StackOverflow">
+		
+		  <a href="https://stackoverflow.com/users/239101/david-soroko" title="StackOverflow">
+		
                   <span class="fa-stack fa-lg">
-                    <i class="fa fa-circle fa-stack-2x"></i>
-                    <i class="fa fa-stack-overflow fa-stack-1x fa-inverse"></i>
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-stack-overflow fa-stack-1x fa-inverse"></i>
                   </span>
                 </a>
               </li>
@@ -308,8 +389,10 @@ of the digits of <code>N</code> which saves us an extra call to <code>a-sum</cod
             
           
 
-          &nbsp;&bull;&nbsp;
-          2018
+          &nbsp;&bull;&nbsp;&copy;
+          
+            2022
+          
 
           
             &nbsp;&bull;&nbsp;
@@ -318,28 +401,29 @@ of the digits of <code>N</code> which saves us an extra call to <code>a-sum</cod
         </p>
         
         <p class="credits theme-by text-muted">
-          Theme by <a href="http://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a> adapted to <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a>
+          <a href="https://gohugo.io">Hugo v0.104.2</a> powered &nbsp;&bull;&nbsp; Theme <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> adapted from <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>
           
         </p>
       </div>
     </div>
   </div>
-</footer>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.js" integrity="sha384-/y1Nn9+QQAipbNQWU65krzJralCnuOasHncUFXGkdwntGeSvQicrYkiUBwsgUqc1" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/contrib/auto-render.min.js" integrity="sha384-dq1/gEHSxPZQ7DdrM82ID4YVol9BYyU7GbWlIwnwyPzotpoc57wDw/guX8EaYGPx" crossorigin="anonymous"></script>
-<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+</footer><script src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js" integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-<script src="https://sorokod.github.io/js/main.js"></script><script> renderMathInElement(document.body); </script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js" integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js" integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script>
-<script src="https://sorokod.github.io/js/load-photoswipe.js"></script>
+
+<script src="https://sorokod.github.io/js/main.js"></script><script> renderMathInElement(document.body); </script><script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js" integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js" integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script><script src="https://sorokod.github.io/js/load-photoswipe.js"></script>
 
 
 
 
 
 
+
+
+
+    
   </body>
 </html>
 

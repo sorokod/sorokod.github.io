@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on magpie</title>
@@ -6,22 +6,27 @@
     <description>Recent content in Tags on magpie</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 16 Mar 2018 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://sorokod.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sun, 02 Oct 2022 19:00:01 +0100</lastBuildDate><atom:link href="https://sorokod.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Algo</title>
-      <link>https://sorokod.github.io/tags/algo/</link>
-      <pubDate>Fri, 16 Mar 2018 00:00:00 +0000</pubDate>
+      <title>fr76</title>
+      <link>https://sorokod.github.io/tags/fr76/</link>
+      <pubDate>Sun, 02 Oct 2022 19:00:01 +0100</pubDate>
       
-      <guid>https://sorokod.github.io/tags/algo/</guid>
+      <guid>https://sorokod.github.io/tags/fr76/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Api</title>
+      <title>iban</title>
+      <link>https://sorokod.github.io/tags/iban/</link>
+      <pubDate>Sun, 02 Oct 2022 19:00:01 +0100</pubDate>
+      
+      <guid>https://sorokod.github.io/tags/iban/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>api</title>
       <link>https://sorokod.github.io/tags/api/</link>
       <pubDate>Sat, 17 Nov 2018 19:00:01 +0100</pubDate>
       
@@ -30,7 +35,7 @@
     </item>
     
     <item>
-      <title>Collections</title>
+      <title>collections</title>
       <link>https://sorokod.github.io/tags/collections/</link>
       <pubDate>Sat, 17 Nov 2018 19:00:01 +0100</pubDate>
       
@@ -39,25 +44,7 @@
     </item>
     
     <item>
-      <title>Java</title>
-      <link>https://sorokod.github.io/tags/java/</link>
-      <pubDate>Tue, 01 Mar 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://sorokod.github.io/tags/java/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Jmh</title>
-      <link>https://sorokod.github.io/tags/jmh/</link>
-      <pubDate>Fri, 16 Mar 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://sorokod.github.io/tags/jmh/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Kotlin</title>
+      <title>kotlin</title>
       <link>https://sorokod.github.io/tags/kotlin/</link>
       <pubDate>Sat, 17 Nov 2018 19:00:01 +0100</pubDate>
       
@@ -66,7 +53,34 @@
     </item>
     
     <item>
-      <title>Random</title>
+      <title>algo</title>
+      <link>https://sorokod.github.io/tags/algo/</link>
+      <pubDate>Fri, 16 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://sorokod.github.io/tags/algo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>jmh</title>
+      <link>https://sorokod.github.io/tags/jmh/</link>
+      <pubDate>Fri, 16 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://sorokod.github.io/tags/jmh/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>java</title>
+      <link>https://sorokod.github.io/tags/java/</link>
+      <pubDate>Tue, 01 Mar 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://sorokod.github.io/tags/java/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>random</title>
       <link>https://sorokod.github.io/tags/random/</link>
       <pubDate>Thu, 05 Feb 2015 00:00:00 +0000</pubDate>
       

@@ -1,23 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Random on magpie</title>
+    <title>random on magpie</title>
     <link>https://sorokod.github.io/tags/random/</link>
-    <description>Recent content in Random on magpie</description>
+    <description>Recent content in random on magpie</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 05 Feb 2015 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://sorokod.github.io/tags/random/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Thu, 05 Feb 2015 00:00:00 +0000</lastBuildDate><atom:link href="https://sorokod.github.io/tags/random/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Slide</title>
       <link>https://sorokod.github.io/post/2015-02-05-slide/</link>
       <pubDate>Thu, 05 Feb 2015 00:00:00 +0000</pubDate>
       
       <guid>https://sorokod.github.io/post/2015-02-05-slide/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;https://sorokod.github.io/img/800px-Kungsgatan_1967.jpg&#34; alt=&#34;Kungsgatan&#34; /&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;&lt;img src=&#34;https://sorokod.github.io/img/800px-Kungsgatan_1967.jpg&#34; alt=&#34;Kungsgatan&#34;&gt;&lt;/p&gt;</description>
     </item>
     
   </channel>

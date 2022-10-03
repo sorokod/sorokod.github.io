@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>magpie</title>
@@ -6,10 +6,15 @@
     <description>Recent content on magpie</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 17 Nov 2018 19:00:01 +0100</lastBuildDate>
-    
-	<atom:link href="https://sorokod.github.io/index.xml" rel="self" type="application/rss+xml" />
-    
+    <lastBuildDate>Sun, 02 Oct 2022 19:00:01 +0100</lastBuildDate><atom:link href="https://sorokod.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>FR76 in French IBANs</title>
+      <link>https://sorokod.github.io/post/2022-10-01-fr-iban/</link>
+      <pubDate>Sun, 02 Oct 2022 19:00:01 +0100</pubDate>
+      
+      <guid>https://sorokod.github.io/post/2022-10-01-fr-iban/</guid>
+      <description>&lt;p&gt;French IBANs are often prefixed with &lt;strong&gt;FR76&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>The forEach API</title>
@@ -17,11 +22,9 @@
       <pubDate>Sat, 17 Nov 2018 19:00:01 +0100</pubDate>
       
       <guid>https://sorokod.github.io/post/2018-11-17-the-foreach-api/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;https://sorokod.github.io/img/kotlin-api.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
+      <description>&lt;p&gt;&lt;img src=&#34;https://sorokod.github.io/img/kotlin-api.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;After one time too many stumbling over a forgotten/unknown function in Kotlin&amp;rsquo;s &amp;ldquo;collection&amp;rdquo; API, I decided to take stock
 of what&amp;rsquo;s available.&lt;/p&gt;
-
 &lt;p&gt;&lt;strong&gt;TLDR&lt;/strong&gt; - That API is pretty large.&lt;/p&gt;</description>
     </item>
     
@@ -31,8 +34,7 @@ of what&amp;rsquo;s available.&lt;/p&gt;
       <pubDate>Sun, 09 Sep 2018 18:00:01 +0100</pubDate>
       
       <guid>https://sorokod.github.io/post/2018-09-09-kotlin-functions-as-objects/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;https://sorokod.github.io/img/kotlin.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
+      <description>&lt;p&gt;&lt;img src=&#34;https://sorokod.github.io/img/kotlin.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Sometimes it is useful to look at a subject from a slightly different perspective, this provides a sort of mental
 &lt;a href=&#34;https://en.wikipedia.org/wiki/Binocular_vision&#34;&gt;&amp;ldquo;binocular vision&amp;rdquo;&lt;/a&gt; and allows to flesh out some details that are less obvious otherwise.&lt;/p&gt;</description>
     </item>
@@ -43,11 +45,9 @@ of what&amp;rsquo;s available.&lt;/p&gt;
       <pubDate>Sat, 31 Mar 2018 18:17:09 +0100</pubDate>
       
       <guid>https://sorokod.github.io/post/2018-03-31-kotlin-result/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;https://sorokod.github.io/img/kotlin.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
+      <description>&lt;p&gt;&lt;img src=&#34;https://sorokod.github.io/img/kotlin.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Some languages provide a facility to return an error from a call to method/function, along with the actual result value.
 This allows (or forces) the programmer to take into account potential runtime errors.&lt;/p&gt;
-
 &lt;p&gt;Something similar can be done in Kotlin.&lt;/p&gt;</description>
     </item>
     
@@ -57,8 +57,7 @@ This allows (or forces) the programmer to take into account potential runtime er
       <pubDate>Fri, 16 Mar 2018 00:00:00 +0000</pubDate>
       
       <guid>https://sorokod.github.io/post/2018-03-16-fibonacci/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;https://sorokod.github.io/img/fibonacci-sequence.png&#34; alt=&#34;Fibonacci spiral&#34; /&gt;&lt;/p&gt;
-
+      <description>&lt;p&gt;&lt;img src=&#34;https://sorokod.github.io/img/fibonacci-sequence.png&#34; alt=&#34;Fibonacci spiral&#34;&gt;&lt;/p&gt;
 &lt;p&gt;I enjoyed reading the &lt;a href=&#34;https://blog.des.io/posts/2018-03-08-fibonacci.html&#34;&gt;The Fibonacci Problem blog post&lt;/a&gt; that shows (among other things) a tail recursive algorithm for the Fibonacci sequence.&lt;/p&gt;</description>
     </item>
     
@@ -68,7 +67,7 @@ This allows (or forces) the programmer to take into account potential runtime er
       <pubDate>Tue, 01 Mar 2016 00:00:00 +0000</pubDate>
       
       <guid>https://sorokod.github.io/post/2016-03-01-armstrong-numbers/</guid>
-      <description>&lt;p&gt;An &lt;a href=&#34;https://en.wikipedia.org/wiki/Narcissistic_number&#34;&gt;Armstrong number&lt;/a&gt; is &amp;ldquo;&lt;em&gt;a number that is the sum of its own digits each raised to the power of the number of digits&lt;/em&gt;&amp;ldquo;&lt;/p&gt;</description>
+      <description>&lt;p&gt;An &lt;a href=&#34;https://en.wikipedia.org/wiki/Narcissistic_number&#34;&gt;Armstrong number&lt;/a&gt; is &amp;ldquo;&lt;em&gt;a number that is the sum of its own digits each raised to the power of the number of digits&lt;/em&gt;&amp;rdquo;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -77,11 +76,11 @@ This allows (or forces) the programmer to take into account potential runtime er
       <pubDate>Thu, 05 Feb 2015 00:00:00 +0000</pubDate>
       
       <guid>https://sorokod.github.io/post/2015-02-05-slide/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;https://sorokod.github.io/img/800px-Kungsgatan_1967.jpg&#34; alt=&#34;Kungsgatan&#34; /&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;&lt;img src=&#34;https://sorokod.github.io/img/800px-Kungsgatan_1967.jpg&#34; alt=&#34;Kungsgatan&#34;&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
-      <title>About me</title>
+      <title>about me</title>
       <link>https://sorokod.github.io/page/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       

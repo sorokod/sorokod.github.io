@@ -1,109 +1,68 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
   <url>
-    <loc>https://sorokod.github.io/post/2018-11-17-the-foreach-api/</loc>
-    <lastmod>2018-11-17T19:00:01+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://sorokod.github.io/post/2018-09-09-kotlin-functions-as-objects/</loc>
-    <lastmod>2018-09-09T18:00:01+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://sorokod.github.io/post/2018-03-31-kotlin-result/</loc>
-    <lastmod>2018-03-31T18:17:09+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://sorokod.github.io/post/2018-03-16-fibonacci/</loc>
-    <lastmod>2018-03-16T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://sorokod.github.io/post/2016-03-01-armstrong-numbers/</loc>
-    <lastmod>2016-03-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://sorokod.github.io/post/2015-02-05-slide/</loc>
-    <lastmod>2015-02-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://sorokod.github.io/page/about/</loc>
-  </url>
-  
-  <url>
-    <loc>https://sorokod.github.io/tags/algo/</loc>
-    <lastmod>2018-03-16T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
+    <loc>https://sorokod.github.io/tags/fr76/</loc>
+    <lastmod>2022-10-02T19:00:01+01:00</lastmod>
+  </url><url>
+    <loc>https://sorokod.github.io/post/2022-10-01-fr-iban/</loc>
+    <lastmod>2022-10-02T19:00:01+01:00</lastmod>
+  </url><url>
+    <loc>https://sorokod.github.io/tags/iban/</loc>
+    <lastmod>2022-10-02T19:00:01+01:00</lastmod>
+  </url><url>
+    <loc>https://sorokod.github.io/</loc>
+    <lastmod>2022-10-02T19:00:01+01:00</lastmod>
+  </url><url>
+    <loc>https://sorokod.github.io/post/</loc>
+    <lastmod>2022-10-02T19:00:01+01:00</lastmod>
+  </url><url>
+    <loc>https://sorokod.github.io/tags/</loc>
+    <lastmod>2022-10-02T19:00:01+01:00</lastmod>
+  </url><url>
     <loc>https://sorokod.github.io/tags/api/</loc>
     <lastmod>2018-11-17T19:00:01+01:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://sorokod.github.io/categories/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://sorokod.github.io/tags/collections/</loc>
     <lastmod>2018-11-17T19:00:01+01:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://sorokod.github.io/tags/java/</loc>
-    <lastmod>2016-03-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://sorokod.github.io/tags/jmh/</loc>
-    <lastmod>2018-03-16T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://sorokod.github.io/tags/kotlin/</loc>
     <lastmod>2018-11-17T19:00:01+01:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://sorokod.github.io/page/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://sorokod.github.io/post/</loc>
+  </url><url>
+    <loc>https://sorokod.github.io/post/2018-11-17-the-foreach-api/</loc>
     <lastmod>2018-11-17T19:00:01+01:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
+  </url><url>
+    <loc>https://sorokod.github.io/post/2018-09-09-kotlin-functions-as-objects/</loc>
+    <lastmod>2018-09-09T18:00:01+01:00</lastmod>
+  </url><url>
+    <loc>https://sorokod.github.io/post/2018-03-31-kotlin-result/</loc>
+    <lastmod>2018-03-31T18:17:09+01:00</lastmod>
+  </url><url>
+    <loc>https://sorokod.github.io/tags/algo/</loc>
+    <lastmod>2018-03-16T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://sorokod.github.io/post/2018-03-16-fibonacci/</loc>
+    <lastmod>2018-03-16T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://sorokod.github.io/tags/jmh/</loc>
+    <lastmod>2018-03-16T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://sorokod.github.io/post/2016-03-01-armstrong-numbers/</loc>
+    <lastmod>2016-03-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://sorokod.github.io/tags/java/</loc>
+    <lastmod>2016-03-01T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://sorokod.github.io/tags/random/</loc>
     <lastmod>2015-02-05T00:00:00+00:00</lastmod>
-    <priority>0</priority>
+  </url><url>
+    <loc>https://sorokod.github.io/post/2015-02-05-slide/</loc>
+    <lastmod>2015-02-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://sorokod.github.io/page/about/</loc>
+  </url><url>
+    <loc>https://sorokod.github.io/categories/</loc>
+  </url><url>
+    <loc>https://sorokod.github.io/page/</loc>
   </url>
-  
-  <url>
-    <loc>https://sorokod.github.io/tags/</loc>
-    <lastmod>2018-03-16T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://sorokod.github.io/</loc>
-    <lastmod>2018-11-17T19:00:01+01:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
 </urlset>

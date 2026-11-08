@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
 		<title>Tags on magpie</title>
-		<link>https://sorokod.github.io/tags/</link>
+		<link>http://localhost:1313/tags/</link>
 		<description>Recent content in Tags on magpie</description>
 		<generator>Hugo</generator>
 		<language>en-us</language>
@@ -10,70 +10,70 @@
 		
 		
 		
-			<lastBuildDate>Sun, 02 Oct 2022 19:00:01 +0100</lastBuildDate>
+			<lastBuildDate>Sun, 08 Nov 2026 00:00:00 +0000</lastBuildDate>
 		
-			<atom:link href="https://sorokod.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+			<atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
 			<item>
 				<title>Fr76</title>
-				<link>https://sorokod.github.io/tags/fr76/</link>
+				<link>http://localhost:1313/tags/fr76/</link>
 				<pubDate>Sun, 02 Oct 2022 19:00:01 +0100</pubDate>
-				<guid>https://sorokod.github.io/tags/fr76/</guid>
+				<guid>http://localhost:1313/tags/fr76/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Iban</title>
-				<link>https://sorokod.github.io/tags/iban/</link>
+				<link>http://localhost:1313/tags/iban/</link>
 				<pubDate>Sun, 02 Oct 2022 19:00:01 +0100</pubDate>
-				<guid>https://sorokod.github.io/tags/iban/</guid>
+				<guid>http://localhost:1313/tags/iban/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Api</title>
-				<link>https://sorokod.github.io/tags/api/</link>
+				<link>http://localhost:1313/tags/api/</link>
 				<pubDate>Sat, 17 Nov 2018 19:00:01 +0100</pubDate>
-				<guid>https://sorokod.github.io/tags/api/</guid>
+				<guid>http://localhost:1313/tags/api/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Collections</title>
-				<link>https://sorokod.github.io/tags/collections/</link>
+				<link>http://localhost:1313/tags/collections/</link>
 				<pubDate>Sat, 17 Nov 2018 19:00:01 +0100</pubDate>
-				<guid>https://sorokod.github.io/tags/collections/</guid>
+				<guid>http://localhost:1313/tags/collections/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Kotlin</title>
-				<link>https://sorokod.github.io/tags/kotlin/</link>
+				<link>http://localhost:1313/tags/kotlin/</link>
 				<pubDate>Sat, 17 Nov 2018 19:00:01 +0100</pubDate>
-				<guid>https://sorokod.github.io/tags/kotlin/</guid>
+				<guid>http://localhost:1313/tags/kotlin/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Algo</title>
-				<link>https://sorokod.github.io/tags/algo/</link>
+				<link>http://localhost:1313/tags/algo/</link>
 				<pubDate>Fri, 16 Mar 2018 00:00:00 +0000</pubDate>
-				<guid>https://sorokod.github.io/tags/algo/</guid>
+				<guid>http://localhost:1313/tags/algo/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Jmh</title>
-				<link>https://sorokod.github.io/tags/jmh/</link>
+				<link>http://localhost:1313/tags/jmh/</link>
 				<pubDate>Fri, 16 Mar 2018 00:00:00 +0000</pubDate>
-				<guid>https://sorokod.github.io/tags/jmh/</guid>
+				<guid>http://localhost:1313/tags/jmh/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Java</title>
-				<link>https://sorokod.github.io/tags/java/</link>
+				<link>http://localhost:1313/tags/java/</link>
 				<pubDate>Tue, 01 Mar 2016 00:00:00 +0000</pubDate>
-				<guid>https://sorokod.github.io/tags/java/</guid>
+				<guid>http://localhost:1313/tags/java/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Random</title>
-				<link>https://sorokod.github.io/tags/random/</link>
+				<link>http://localhost:1313/tags/random/</link>
 				<pubDate>Thu, 05 Feb 2015 00:00:00 +0000</pubDate>
-				<guid>https://sorokod.github.io/tags/random/</guid>
+				<guid>http://localhost:1313/tags/random/</guid>
 				<description></description>
 			</item>
 	</channel>

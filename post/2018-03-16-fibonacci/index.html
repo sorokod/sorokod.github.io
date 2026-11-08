@@ -1,151 +1,249 @@
+
+
+
 <!DOCTYPE html>
-<html lang="en" itemscope itemtype="http://schema.org/WebPage">
-  <head>
-    
+<html lang="en" itemscope itemtype="https://schema.org/WebPage">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><script>
+      (function() {
+        var saved = localStorage.getItem('theme');
+        if (saved === 'dark') {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        } else if (saved === 'light') {
+          document.documentElement.setAttribute('data-theme', 'light');
+        } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        }
+      })();
+    </script>
 
   <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
+ 
+
+
+  
   <title>Fibonacci - magpie</title>
+
   <meta name="description" content="Fibonacci with tail recursion in Kotlin">
-  <meta name="author" content="David Soroko"/><script type="application/ld+json">
-{
-    "@context": "http://schema.org",
-    "@type": "WebSite",
-    "name": "magpie",
-    
-    "url": "https:\/\/sorokod.github.io\/"
-}
-</script><script type="application/ld+json">
-{
-  "@context": "http://schema.org",
-  "@type": "Organization",
-  "name": "",
-  "url": "https:\/\/sorokod.github.io\/"
-  
-  
-  
-  
-}
-</script>
+  <meta name="author" content="David Soroko"/>
+
+
+
+
+
+
 <script type="application/ld+json">
 {
-  "@context": "http://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [{
-        "@type": "ListItem",
-        "position": 1,
-        "item": {
-          "@id": "https:\/\/sorokod.github.io\/",
-          "name": "home"
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@id": "http://localhost:1313/#website",
+      "@type": "WebSite",
+      "name": "magpie",
+      "publisher": {
+        "@id": "http://localhost:1313/#organization"
+      },
+      "url": "http://localhost:1313/"
+    },
+    {
+      "@id": "http://localhost:1313/#organization",
+      "@type": "Organization",
+      "name": "David Soroko",
+      "url": "http://localhost:1313/"
+    },
+    {
+      "@id": "http://localhost:1313/post/2018-03-16-fibonacci/#breadcrumb",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "item": "http://localhost:1313/",
+          "name": "Home",
+          "position": 1
+        },
+        {
+          "@type": "ListItem",
+          "item": "http://localhost:1313/post/",
+          "name": "Posts",
+          "position": 2
+        },
+        {
+          "@type": "ListItem",
+          "item": "http://localhost:1313/post/2018-03-16-fibonacci/",
+          "name": "Fibonacci",
+          "position": 3
         }
-    },{
-        "@type": "ListItem",
-        "position": 3,
-        "item": {
-          "@id": "https:\/\/sorokod.github.io\/post\/2018-03-16-fibonacci\/",
-          "name": "Fibonacci"
+      ]
+    },
+    {
+      "@id": "http://localhost:1313/post/2018-03-16-fibonacci/#webpage",
+      "@type": "WebPage",
+      "breadcrumb": {
+        "@id": "http://localhost:1313/post/2018-03-16-fibonacci/#breadcrumb"
+      },
+      "isPartOf": {
+        "@id": "http://localhost:1313/#website"
+      },
+      "name": "Fibonacci",
+      "url": "http://localhost:1313/post/2018-03-16-fibonacci/"
+    },
+    {
+      "@id": "http://localhost:1313/#author-david-soroko",
+      "@type": "Person",
+      "name": "David Soroko",
+      "url": "http://localhost:1313/"
+    },
+    {
+      "@id": "http://localhost:1313/post/2018-03-16-fibonacci/#article",
+      "@type": "Article",
+      "author": [
+        {
+          "@id": "http://localhost:1313/#author-david-soroko"
         }
-    }]
-}
-</script><script type="application/ld+json">
-{
-  "@context": "http://schema.org",
-  "@type": "Article",
-  "author": {
-    "name" : "David Soroko"
-  },
-  "headline": "Fibonacci",
-  "description" : "\nI enjoyed reading the The Fibonacci Problem blog post that shows (among other things) a tail recursive algorithm for the Fibonacci sequence.\n",
-  "inLanguage" : "en",
-  "wordCount":  697 ,
-  "datePublished" : "2018-03-16T00:00:00",
-  "dateModified" : "2018-03-16T00:00:00",
-  "image" : "https:\/\/sorokod.github.io\/img\/magpie.png",
-  "keywords" : [ "kotlin, algo, jmh" ],
-  "mainEntityOfPage" : "https:\/\/sorokod.github.io\/post\/2018-03-16-fibonacci\/",
-  "publisher" : {
-    "@type": "Organization",
-    "name" : "https:\/\/sorokod.github.io\/",
-    "logo" : {
-        "@type" : "ImageObject",
-        "url" : "https:\/\/sorokod.github.io\/img\/magpie.png",
-        "height" :  60 ,
-        "width" :  60
+      ],
+      "dateCreated": "2018-03-16T00:00:00+00:00",
+      "dateModified": "2018-03-16T00:00:00+00:00",
+      "datePublished": "2018-03-16T00:00:00+00:00",
+      "description": " I enjoyed reading the The Fibonacci Problem blog post that shows (among other things) a tail recursive algorithm for the Fibonacci sequence.\n",
+      "headline": "Fibonacci",
+      "image": "http://localhost:1313/img/magpie.png",
+      "inLanguage": "en",
+      "keywords": [
+        "kotlin",
+        "algo",
+        "jmh"
+      ],
+      "mainEntityOfPage": {
+        "@id": "http://localhost:1313/post/2018-03-16-fibonacci/#webpage"
+      },
+      "publisher": {
+        "@id": "http://localhost:1313/#organization"
+      },
+      "wordCount": 697
     }
-  }
+  ]
 }
 </script>
-
-<meta property="og:title" content="Fibonacci" />
-<meta property="og:description" content="Fibonacci with tail recursion in Kotlin">
-<meta property="og:image" content="https://sorokod.github.io/img/magpie.png" />
-<meta property="og:url" content="https://sorokod.github.io/post/2018-03-16-fibonacci/" />
-<meta property="og:type" content="website" />
-<meta property="og:site_name" content="magpie" />
-
+<meta property="og:url" content="http://localhost:1313/post/2018-03-16-fibonacci/">
+	<meta property="og:site_name" content="magpie">
+	<meta property="og:title" content="Fibonacci">
+	<meta property="og:description" content="I enjoyed reading the The Fibonacci Problem blog post that shows (among other things) a tail recursive algorithm for the Fibonacci sequence.">
+	<meta property="og:locale" content="en_us">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="post">
+		<meta property="article:published_time" content="2018-03-16T00:00:00+00:00">
+		<meta property="article:modified_time" content="2018-03-16T00:00:00+00:00">
+		<meta property="article:tag" content="Kotlin">
+		<meta property="article:tag" content="Algo">
+		<meta property="article:tag" content="Jmh">
+<link rel="canonical" href="http://localhost:1313/post/2018-03-16-fibonacci/" />
   <meta name="twitter:title" content="Fibonacci" />
   <meta name="twitter:description" content="Fibonacci with tail recursion in Kotlin">
-  <meta name="twitter:image" content="https://sorokod.github.io/img/magpie.png" />
+  <meta name="twitter:image" content="http://localhost:1313/img/magpie.png" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="generator" content="Hugo 0.104.2" />
-  <link rel="alternate" href="https://sorokod.github.io/index.xml" type="application/rss+xml" title="magpie"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://sorokod.github.io/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" /><link rel="stylesheet" href="https://sorokod.github.io/css/syntax.css" /><link rel="stylesheet" href="https://sorokod.github.io/css/codeblock.css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css" integrity="sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css" integrity="sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R" crossorigin="anonymous">
+
+<meta name="generator" content="Hugo 0.169.0">
+<link rel="alternate" href="/index.xml" type="application/rss+xml" title="magpie">
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.45/dist/katex.min.css" integrity="sha384-UA8juhPf75SzzAMA/4fo3yOU7sBJ0om7SCD2GHq0fZqZco6tr1UCV7nUbk9J90JM" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v7.2.0/css/all.css" integrity="sha384-EXatlQyrOJgDaM9/a74ArMzy7/2bTMSrZj8ID1IPeVmc3GncfCugefCFWSLj8JL/" crossorigin="anonymous">
+  
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8&#43;LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  
+<link rel="stylesheet" href="/css/beautifulhugo-f9fdff79.bf680812be0d8e16fe1a34f5a314688d9cc50bb1451fa42e814751cf4fcb384f.css" integrity="sha256-v2gIEr4Njhb&#43;GjT1oxRojZzFC7FFH6QugUdRz0/LOE8=" crossorigin="anonymous" />
+  
+<link rel="stylesheet" media="print" href="/css/print.9ea1f3dd144aefb5611357af9799c2d7ffcc61e2aeec77d2770b857a9b85f3e7.css" integrity="sha256-nqHz3RRK77VhE1evl5nC1//MYeKu7HfSdwuFepuF8&#43;c=" crossorigin="anonymous" />
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400;1,700&family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap" />
+<link rel="stylesheet" id="hljs-dark" media="(prefers-color-scheme: dark)" href="/css/syntax-dark.bcab7cbda70172cbe05403f32b3e40267f820f627c6b8ea82f1cad666b2c97b4.css" integrity="sha256-vKt8vacBcsvgVAPzKz5AJn&#43;CD2J8a46oLxytZmssl7Q=" crossorigin="anonymous" />
+  <script>
+    
+    (function() {
+      var saved = localStorage.getItem('theme');
+      var hljsDark = document.getElementById('hljs-dark');
+      if (hljsDark && (saved === 'dark' || saved === 'light')) {
+        hljsDark.media = (saved === 'dark') ? 'all' : 'not all';
+      }
+    })();
+  </script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@5.4.4/dist/photoswipe.css" integrity="sha384-IfxC36XL/toUyJ939C73PcgMuRzAZuIzZxE38drsmO5p6jD7ei&#43;Zx/1oA/0l8ysE" crossorigin="anonymous">
 
   </head>
   <body>
-    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+    <nav class="navbar navbar-expand-md navbar-light navbar-custom fixed-top">
   <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
+    
+    <a class="navbar-brand" href="/">magpie</a>
+    <div class="d-flex align-items-center">
+      
+      
+      
+      <button class="theme-toggle" id="toc-toggle" aria-controls="toc-panel" aria-expanded="false" aria-label="Table of Contents" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Table of Contents">
+        <span class="fas fa-list"></span>
       </button>
-      <a class="navbar-brand" href="https://sorokod.github.io/">magpie</a>
+      
+      
+      
+      <button class="theme-toggle" id="theme-toggle" aria-label="Theme" data-bs-toggle="tooltip" data-bs-placement="bottom" data-tooltip-auto="Auto (follows system)" data-tooltip-light="Light mode" data-tooltip-dark="Dark mode" title="Auto (follows system)">
+        <span class="fas fa-circle-half-stroke" id="theme-icon-auto"></span>
+        <span class="fas fa-sun" id="theme-icon-light" style="display: none;"></span>
+        <span class="fas fa-moon" id="theme-icon-dark" style="display: none;"></span>
+      </button>
+      
+      
+      <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation">
+  <span class="navbar-toggler-icon"></span>
+</button>
+
     </div>
 
     <div class="collapse navbar-collapse" id="main-navbar">
-      <ul class="nav navbar-nav navbar-right">
+      <ul class="navbar-nav ms-auto">
         
           
-            <li>
-              <a title="Blog" href="/">Blog</a>
+          
+            <li class="nav-item" >
+              <a class="nav-link" title="Blog" href="/">Blog</a>
             </li>
           
         
           
-            <li>
-              <a title="About" href="/page/about/">About</a>
+          
+            <li class="nav-item" >
+              <a class="nav-link" title="About" href="/page/about/">About</a>
             </li>
           
         
           
-            <li>
-              <a title="Tags" href="/tags">Tags</a>
+          
+            <li class="nav-item" >
+              <a class="nav-link" title="Tags" href="/tags">Tags</a>
             </li>
           
         
 
-        
+          
 
         
       </ul>
+      
+
     </div>
 
     
-      <div class="avatar-container">
-        <div class="avatar-img-border">
-          <a title="magpie" href="https://sorokod.github.io/">
-            <img class="avatar-img" src="https://sorokod.github.io/img/magpie.png" alt="magpie" />
-          </a>
+    
+      
+        <div class="avatar-container">
+          <div class="avatar-img-border">
+            <a title="magpie" href="/">
+              <img class="avatar-img" src="/img/magpie.png" alt="magpie" />
+             
+            </a>
+          </div>
         </div>
-      </div>
+      
     
 
   </div>
@@ -154,59 +252,11 @@
 
 
 
+
+
+
+
     
-
-
-<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
-
-<div class="pswp__bg"></div>
-
-<div class="pswp__scroll-wrap">
-    
-    <div class="pswp__container">
-      <div class="pswp__item"></div>
-      <div class="pswp__item"></div>
-      <div class="pswp__item"></div>
-    </div>
-    
-    <div class="pswp__ui pswp__ui--hidden">
-    <div class="pswp__top-bar">
-      
-      <div class="pswp__counter"></div>
-      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
-      <button class="pswp__button pswp__button--share" title="Share"></button>
-      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
-      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
-      
-      
-      <div class="pswp__preloader">
-        <div class="pswp__preloader__icn">
-          <div class="pswp__preloader__cut">
-            <div class="pswp__preloader__donut"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-      <div class="pswp__share-tooltip"></div>
-    </div>
-    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
-    </button>
-    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
-    </button>
-    <div class="pswp__caption">
-      <div class="pswp__caption__center"></div>
-    </div>
-    </div>
-    </div>
-</div>
-
-
-  
-  
-  
-
-
 
 
 
@@ -219,33 +269,42 @@
     <div class="intro-header no-img">
       <div class="container">
         <div class="row">
-          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+          <div class="col-md-10 offset-md-1">
             <div class="post-heading">
               
-                <h1>Fibonacci</h1>
+              <h1>Fibonacci</h1>
               
               
               
-                
-                  <h2 class="post-subheading">Fibonacci with tail recursion in Kotlin</h2>
-                
-              
+
+  
+    <h2 class="post-subheading">Fibonacci with tail recursion in Kotlin</h2>
+  
+
+
               
                 <span class="post-meta">
   
   
-  <i class="fas fa-calendar"></i>&nbsp;Posted on March 16, 2018
+  
+  
+     
+  
+  
+  
+    <i class="fas fa-calendar"></i>&nbsp;Posted on March 16, 2018
+    
+    
   
   
   
   
     
-      &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;David Soroko
-    
+      &nbsp;|&nbsp;
+    <i class="fas fa-user"></i>&nbsp;David Soroko
   
   
 </span>
-
 
               
             </div>
@@ -254,29 +313,38 @@
       </div>
     </div>
   
+    
+
   </header>
 
 
     
-<div class="container" role="main">
-  <div class="row">
-    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-      <article role="main" class="blog-post">
-        <p><img src="/img/fibonacci-sequence.png" alt="Fibonacci spiral"></p>
+  <div class="container" role="main">
+    <div class="row">
+      <div class="col-md-10 offset-md-1">
+        <article role="main" class="blog-post">
+          
+
+
+          
+
+          
+          <p><img src="/img/fibonacci-sequence.png" alt="Fibonacci spiral" loading="lazy">
+</p>
 <p>I enjoyed reading the <a href="https://blog.des.io/posts/2018-03-08-fibonacci.html">The Fibonacci Problem blog post</a> that shows (among other things) a tail recursive algorithm for the Fibonacci sequence.</p>
 <p>The original code is in Golang which has no tail recursion optimization. I wanted to compare the Golang code to Kotlin, see Kotlin&rsquo;s <code>tailrec</code> in action and measure the entire thing with <a href="http://openjdk.java.net/projects/code-tools/jmh/"><code>jmh</code></a>.</p>
 <p>I retained the original function names (up to capitalization) so the original Golang code:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="kd">func</span> <span class="nf">FibNaive</span><span class="p">(</span><span class="nx">n</span> <span class="kt">int</span><span class="p">)</span> <span class="kt">int</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="nx">n</span> <span class="p">&lt;</span> <span class="mi">2</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="nx">n</span>
-</span></span><span class="line"><span class="cl">    <span class="p">}</span>   
-</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nf">FibNaive</span><span class="p">(</span><span class="nx">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="nf">FibNaive</span><span class="p">(</span><span class="nx">n</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="kd">func</span><span class="w"> </span><span class="nf">FibNaive</span><span class="p">(</span><span class="nx">n</span><span class="w"> </span><span class="kt">int</span><span class="p">)</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nx">n</span><span class="w"> </span><span class="p">&lt;</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nx">n</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">   
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nf">FibNaive</span><span class="p">(</span><span class="nx">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nf">FibNaive</span><span class="p">(</span><span class="nx">n</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div>
 <p>looks like so in my version in Kotlin:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="line"><span class="cl"><span class="k">fun</span> <span class="nf">fibNaive</span><span class="p">(</span><span class="n">n</span><span class="p">:</span> <span class="n">Int</span><span class="p">):</span> <span class="n">Int</span> <span class="p">=</span>
 </span></span><span class="line"><span class="cl">        <span class="k">when</span> <span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">            <span class="m">0</span><span class="p">,</span> <span class="m">1</span> <span class="o">-&gt;</span> <span class="n">n</span>
-</span></span><span class="line"><span class="cl">            <span class="k">else</span> <span class="o">-&gt;</span> <span class="n">fibNaive</span><span class="p">(</span><span class="n">n</span> <span class="p">-</span> <span class="m">1</span><span class="p">)</span> <span class="p">+</span> <span class="n">fibNaive</span><span class="p">(</span><span class="n">n</span> <span class="p">-</span> <span class="m">2</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span> <span class="o">-&gt;</span> <span class="n">n</span>
+</span></span><span class="line"><span class="cl">            <span class="k">else</span> <span class="o">-&gt;</span> <span class="n">fibNaive</span><span class="p">(</span><span class="n">n</span> <span class="p">-</span> <span class="mi">1</span><span class="p">)</span> <span class="p">+</span> <span class="n">fibNaive</span><span class="p">(</span><span class="n">n</span> <span class="p">-</span> <span class="mi">2</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">        <span class="p">}</span></span></span></code></pre></div>
 <blockquote>
 <p>Sources are <a href="https://github.com/sorokod/kotlin-fibonaccis">here</a>. To build and run, execute:</p>
@@ -286,11 +354,11 @@
 <p>Here, we improve on the naive approach by caching the intermediate results:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="line"><span class="ln">1</span><span class="cl"><span class="k">fun</span> <span class="nf">fibCached</span><span class="p">(</span>
 </span></span><span class="line"><span class="ln">2</span><span class="cl">    <span class="n">n</span><span class="p">:</span> <span class="n">Int</span><span class="p">,</span> 
-</span></span><span class="line"><span class="ln">3</span><span class="cl">    <span class="n">cache</span><span class="p">:</span> <span class="n">MutableMap</span><span class="p">&lt;</span><span class="n">Int</span><span class="p">,</span> <span class="n">Int</span><span class="p">&gt;</span> <span class="p">=</span> <span class="n">mutableMapOf</span><span class="p">(</span><span class="n">Pair</span><span class="p">(</span><span class="m">0</span><span class="p">,</span> <span class="m">0</span><span class="p">),</span> <span class="n">Pair</span><span class="p">(</span><span class="m">1</span><span class="p">,</span> <span class="m">1</span><span class="p">))):</span> <span class="n">Int</span> <span class="p">=</span>
+</span></span><span class="line"><span class="ln">3</span><span class="cl">    <span class="n">cache</span><span class="p">:</span> <span class="n">MutableMap</span><span class="p">&lt;</span><span class="n">Int</span><span class="p">,</span> <span class="n">Int</span><span class="p">&gt;</span> <span class="p">=</span> <span class="n">mutableMapOf</span><span class="p">(</span><span class="n">Pair</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">Pair</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">))):</span> <span class="n">Int</span> <span class="p">=</span>
 </span></span><span class="line"><span class="ln">4</span><span class="cl">    
 </span></span><span class="line"><span class="ln">5</span><span class="cl">        <span class="n">cache</span><span class="p">.</span><span class="n">getOrPut</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="ln">6</span><span class="cl">            <span class="n">cache</span><span class="p">.</span><span class="n">getOrPut</span><span class="p">(</span><span class="n">n</span> <span class="p">-</span> <span class="m">1</span><span class="p">)</span> <span class="p">{</span> <span class="n">fibCached</span><span class="p">(</span><span class="n">n</span> <span class="p">-</span> <span class="m">1</span><span class="p">,</span> <span class="n">cache</span><span class="p">)</span> <span class="p">}</span> <span class="p">+</span>
-</span></span><span class="line"><span class="ln">7</span><span class="cl">            <span class="n">cache</span><span class="p">.</span><span class="n">getOrPut</span><span class="p">(</span><span class="n">n</span> <span class="p">-</span> <span class="m">2</span><span class="p">)</span> <span class="p">{</span> <span class="n">fibCached</span><span class="p">(</span><span class="n">n</span> <span class="p">-</span> <span class="m">2</span><span class="p">,</span> <span class="n">cache</span><span class="p">)</span> <span class="p">}</span>
+</span></span><span class="line"><span class="ln">6</span><span class="cl">            <span class="n">cache</span><span class="p">.</span><span class="n">getOrPut</span><span class="p">(</span><span class="n">n</span> <span class="p">-</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span> <span class="n">fibCached</span><span class="p">(</span><span class="n">n</span> <span class="p">-</span> <span class="mi">1</span><span class="p">,</span> <span class="n">cache</span><span class="p">)</span> <span class="p">}</span> <span class="p">+</span>
+</span></span><span class="line"><span class="ln">7</span><span class="cl">            <span class="n">cache</span><span class="p">.</span><span class="n">getOrPut</span><span class="p">(</span><span class="n">n</span> <span class="p">-</span> <span class="mi">2</span><span class="p">)</span> <span class="p">{</span> <span class="n">fibCached</span><span class="p">(</span><span class="n">n</span> <span class="p">-</span> <span class="mi">2</span><span class="p">,</span> <span class="n">cache</span><span class="p">)</span> <span class="p">}</span>
 </span></span><span class="line"><span class="ln">8</span><span class="cl">        <span class="p">}</span></span></span></code></pre></div>
 <p>This gives us over five orders of magnitude improvement over <code>fibNaive</code>.</p>
 <blockquote>
@@ -305,16 +373,16 @@ call that returns a vector (a Pair really).</p>
 </span></span><span class="line"><span class="ln"> 4</span><span class="cl">
 </span></span><span class="line"><span class="ln"> 5</span><span class="cl">    <span class="k">fun</span> <span class="nf">fibVec</span><span class="p">(</span><span class="n">n</span><span class="p">:</span> <span class="n">Int</span><span class="p">):</span> <span class="n">Pair</span><span class="p">&lt;</span><span class="n">Int</span><span class="p">,</span> <span class="n">Int</span><span class="p">&gt;</span> <span class="p">=</span>
 </span></span><span class="line"><span class="ln"> 6</span><span class="cl">            <span class="k">when</span> <span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="ln"> 7</span><span class="cl">                <span class="m">1</span> <span class="o">-&gt;</span> <span class="n">Pair</span><span class="p">(</span><span class="m">1</span><span class="p">,</span> <span class="m">0</span><span class="p">)</span>
-</span></span><span class="line"><span class="ln"> 8</span><span class="cl">                <span class="k">else</span> <span class="o">-&gt;</span> <span class="n">T</span><span class="p">(</span><span class="n">fibVec</span><span class="p">(</span><span class="n">n</span> <span class="p">-</span> <span class="m">1</span><span class="p">))</span>
+</span></span><span class="line"><span class="ln"> 7</span><span class="cl">                <span class="mi">1</span> <span class="o">-&gt;</span> <span class="n">Pair</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+</span></span><span class="line"><span class="ln"> 8</span><span class="cl">                <span class="k">else</span> <span class="o">-&gt;</span> <span class="n">T</span><span class="p">(</span><span class="n">fibVec</span><span class="p">(</span><span class="n">n</span> <span class="p">-</span> <span class="mi">1</span><span class="p">))</span>
 </span></span><span class="line"><span class="ln"> 9</span><span class="cl">            <span class="p">}</span>
 </span></span><span class="line"><span class="ln">10</span><span class="cl">
 </span></span><span class="line"><span class="ln">11</span><span class="cl">
 </span></span><span class="line"><span class="ln">12</span><span class="cl">    <span class="k">return</span> <span class="k">when</span> <span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="ln">13</span><span class="cl">        <span class="m">0</span><span class="p">,</span> <span class="m">1</span> <span class="o">-&gt;</span> <span class="n">n</span>
+</span></span><span class="line"><span class="ln">13</span><span class="cl">        <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span> <span class="o">-&gt;</span> <span class="n">n</span>
 </span></span><span class="line"><span class="ln">14</span><span class="cl">
 </span></span><span class="line"><span class="ln">15</span><span class="cl">        <span class="k">else</span> <span class="o">-&gt;</span> <span class="p">{</span>
-</span></span><span class="line"><span class="ln">16</span><span class="cl">            <span class="k">val</span> <span class="err">(</span><span class="py">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span> <span class="p">=</span> <span class="n">fibVec</span><span class="p">(</span><span class="n">n</span> <span class="p">-</span> <span class="m">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="ln">16</span><span class="cl">            <span class="k">val</span> <span class="err">(</span><span class="py">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span> <span class="p">=</span> <span class="n">fibVec</span><span class="p">(</span><span class="n">n</span> <span class="p">-</span> <span class="mi">1</span><span class="p">)</span>
 </span></span><span class="line"><span class="ln">17</span><span class="cl">            <span class="n">a</span> <span class="p">+</span> <span class="n">b</span>
 </span></span><span class="line"><span class="ln">18</span><span class="cl">        <span class="p">}</span>
 </span></span><span class="line"><span class="ln">19</span><span class="cl">    <span class="p">}</span>
@@ -325,9 +393,9 @@ the narrative of the original post though:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="line"><span class="cl"><span class="k">fun</span> <span class="nf">fibVecSumKotlin</span><span class="p">(</span><span class="n">n</span><span class="p">:</span> <span class="n">Int</span><span class="p">):</span> <span class="n">Int</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">    <span class="k">fun</span> <span class="nf">genPairSequence</span><span class="p">():</span> <span class="n">Sequence</span><span class="p">&lt;</span><span class="n">Pair</span><span class="p">&lt;</span><span class="n">Int</span><span class="p">,</span> <span class="n">Int</span><span class="p">&gt;&gt;</span> <span class="p">=</span>
-</span></span><span class="line"><span class="cl">            <span class="n">generateSequence</span><span class="p">(</span><span class="n">Pair</span><span class="p">(</span><span class="m">1</span><span class="p">,</span> <span class="m">0</span><span class="p">),</span> <span class="p">{</span> <span class="n">T</span><span class="p">(</span><span class="k">it</span><span class="p">)</span> <span class="p">})</span>
+</span></span><span class="line"><span class="cl">            <span class="n">generateSequence</span><span class="p">(</span><span class="n">Pair</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="p">{</span> <span class="n">T</span><span class="p">(</span><span class="k">it</span><span class="p">)</span> <span class="p">})</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">genPairSequence</span><span class="p">().</span><span class="n">take</span><span class="p">(</span><span class="n">n</span> <span class="p">+</span> <span class="m">1</span><span class="p">).</span><span class="n">last</span><span class="p">().</span><span class="n">second</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">genPairSequence</span><span class="p">().</span><span class="n">take</span><span class="p">(</span><span class="n">n</span> <span class="p">+</span> <span class="mi">1</span><span class="p">).</span><span class="n">last</span><span class="p">().</span><span class="n">second</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div>
 <h2 id="fibtailvecsum">FibTailVecSum</h2>
 <p>The remaining issue in <code>FibVectorSum</code> preventing it being tail recursive is the transformation at line 8. This can be fixed by accumulating
@@ -336,14 +404,14 @@ the sum into the recursive call:</p>
 </span></span><span class="line"><span class="ln"> 2</span><span class="cl">
 </span></span><span class="line"><span class="ln"> 3</span><span class="cl">    <span class="k">tailrec</span> <span class="k">fun</span> <span class="nf">fibTailVec</span><span class="p">(</span><span class="n">acc</span><span class="p">:</span> <span class="n">Int</span><span class="p">,</span> <span class="n">a</span><span class="p">:</span> <span class="n">Int</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span> <span class="n">Int</span><span class="p">):</span> <span class="n">Pair</span><span class="p">&lt;</span><span class="n">Int</span><span class="p">,</span> <span class="n">Int</span><span class="p">&gt;</span> <span class="p">=</span>            
 </span></span><span class="line"><span class="ln"> 4</span><span class="cl">            <span class="k">when</span> <span class="p">(</span><span class="n">acc</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="ln"> 5</span><span class="cl">                <span class="m">1</span> <span class="o">-&gt;</span> <span class="n">Pair</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
-</span></span><span class="line"><span class="ln"> 6</span><span class="cl">                <span class="k">else</span> <span class="o">-&gt;</span> <span class="n">fibTailVec</span><span class="p">(</span><span class="n">acc</span> <span class="p">-</span> <span class="m">1</span><span class="p">,</span> <span class="n">a</span> <span class="p">+</span> <span class="n">b</span><span class="p">,</span> <span class="n">a</span><span class="p">)</span>
+</span></span><span class="line"><span class="ln"> 5</span><span class="cl">                <span class="mi">1</span> <span class="o">-&gt;</span> <span class="n">Pair</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+</span></span><span class="line"><span class="ln"> 6</span><span class="cl">                <span class="k">else</span> <span class="o">-&gt;</span> <span class="n">fibTailVec</span><span class="p">(</span><span class="n">acc</span> <span class="p">-</span> <span class="mi">1</span><span class="p">,</span> <span class="n">a</span> <span class="p">+</span> <span class="n">b</span><span class="p">,</span> <span class="n">a</span><span class="p">)</span>
 </span></span><span class="line"><span class="ln"> 7</span><span class="cl">            <span class="p">}</span>
 </span></span><span class="line"><span class="ln"> 8</span><span class="cl">    
 </span></span><span class="line"><span class="ln"> 9</span><span class="cl">    <span class="k">return</span> <span class="k">when</span> <span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="ln">10</span><span class="cl">        <span class="m">0</span><span class="p">,</span> <span class="m">1</span> <span class="o">-&gt;</span> <span class="n">n</span>
+</span></span><span class="line"><span class="ln">10</span><span class="cl">        <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span> <span class="o">-&gt;</span> <span class="n">n</span>
 </span></span><span class="line"><span class="ln">11</span><span class="cl">        <span class="k">else</span> <span class="o">-&gt;</span> <span class="p">{</span>
-</span></span><span class="line"><span class="ln">12</span><span class="cl">            <span class="k">val</span> <span class="err">(</span><span class="py">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span> <span class="p">=</span> <span class="n">fibTailVec</span><span class="p">(</span><span class="n">n</span> <span class="p">-</span> <span class="m">1</span><span class="p">,</span> <span class="m">1</span><span class="p">,</span> <span class="m">0</span><span class="p">)</span>
+</span></span><span class="line"><span class="ln">12</span><span class="cl">            <span class="k">val</span> <span class="err">(</span><span class="py">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span> <span class="p">=</span> <span class="n">fibTailVec</span><span class="p">(</span><span class="n">n</span> <span class="p">-</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
 </span></span><span class="line"><span class="ln">13</span><span class="cl">            <span class="n">a</span> <span class="p">+</span> <span class="n">b</span>
 </span></span><span class="line"><span class="ln">14</span><span class="cl">        <span class="p">}</span>
 </span></span><span class="line"><span class="ln">15</span><span class="cl">    <span class="p">}</span>
@@ -352,16 +420,16 @@ the sum into the recursive call:</p>
 <h2 id="fibiterative">FibIterative</h2>
 <p>In the iterative version the <code>fibTailVec</code> is replaced by a while loop</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="line"><span class="cl"><span class="k">fun</span> <span class="nf">fibIterative</span><span class="p">(</span><span class="n">n</span><span class="p">:</span> <span class="n">Int</span><span class="p">):</span> <span class="n">Int</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="n">n</span> <span class="p">&lt;</span> <span class="m">2</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="n">n</span> <span class="p">&lt;</span> <span class="mi">2</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">n</span>
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">    <span class="k">var</span> <span class="py">acc</span> <span class="p">=</span> <span class="n">n</span>
-</span></span><span class="line"><span class="cl">    <span class="k">var</span> <span class="py">a</span> <span class="p">=</span> <span class="m">1</span>
-</span></span><span class="line"><span class="cl">    <span class="k">var</span> <span class="py">b</span> <span class="p">=</span> <span class="m">0</span>
-</span></span><span class="line"><span class="cl">    <span class="k">var</span> <span class="py">tmp</span> <span class="p">=</span> <span class="m">0</span>
+</span></span><span class="line"><span class="cl">    <span class="k">var</span> <span class="py">a</span> <span class="p">=</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl">    <span class="k">var</span> <span class="py">b</span> <span class="p">=</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl">    <span class="k">var</span> <span class="py">tmp</span> <span class="p">=</span> <span class="mi">0</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="k">while</span> <span class="p">(</span><span class="n">acc</span> <span class="p">&gt;</span> <span class="m">2</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">while</span> <span class="p">(</span><span class="n">acc</span> <span class="p">&gt;</span> <span class="mi">2</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">        <span class="n">acc</span><span class="o">--</span>
 </span></span><span class="line"><span class="cl">        <span class="n">tmp</span> <span class="p">=</span> <span class="n">a</span>
 </span></span><span class="line"><span class="cl">        <span class="n">a</span> <span class="o">+=</span> <span class="n">b</span>
@@ -373,132 +441,137 @@ the sum into the recursive call:</p>
 <p>It is also the fastest.</p>
 <h2 id="benchmarks">Benchmarks</h2>
 <p>Benchmarks were generated using <code>jmh</code> with the following configuration:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="line"><span class="cl"><span class="nd">@State</span><span class="p">(</span><span class="n">Scope</span><span class="p">.</span><span class="n">Benchmark</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="nd">@Fork</span><span class="p">(</span><span class="m">1</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="nd">@Warmup</span><span class="p">(</span><span class="n">iterations</span> <span class="p">=</span> <span class="m">15</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="nd">@Measurement</span><span class="p">(</span><span class="n">iterations</span> <span class="p">=</span> <span class="m">15</span><span class="p">)</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="line"><span class="cl"><span class="nd">@State</span><span class="p">(</span><span class="nc">Scope</span><span class="p">.</span><span class="n">Benchmark</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nd">@Fork</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nd">@Warmup</span><span class="p">(</span><span class="n">iterations</span> <span class="p">=</span> <span class="mi">15</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nd">@Measurement</span><span class="p">(</span><span class="n">iterations</span> <span class="p">=</span> <span class="mi">15</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="nd">@BenchmarkMode</span><span class="p">(</span><span class="n">AverageTime</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="nd">@OutputTimeUnit</span><span class="p">(</span><span class="n">NANOSECONDS</span><span class="p">)</span></span></span></code></pre></div>
 <table>
-<thead>
-<tr>
-<th>Benchmark</th>
-<th>(n)</th>
-<th>Score</th>
-<th>Units</th>
-<th>Normalaized by <code>fibIterative</code></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>fibNaive</td>
-<td>12</td>
-<td>505.787</td>
-<td>ns/op</td>
-<td>109</td>
-</tr>
-<tr>
-<td>fibNaive</td>
-<td>40</td>
-<td>359727438.400</td>
-<td>ns/op</td>
-<td>32702494</td>
-</tr>
-<tr>
-<td>fibCached</td>
-<td>12</td>
-<td>490.736</td>
-<td>ns/op</td>
-<td>106</td>
-</tr>
-<tr>
-<td>fibCached</td>
-<td>40</td>
-<td>1393.079</td>
-<td>ns/op</td>
-<td>123</td>
-</tr>
-<tr>
-<td>fibVecSum</td>
-<td>12</td>
-<td>56.979</td>
-<td>ns/op</td>
-<td>12</td>
-</tr>
-<tr>
-<td>fibVecSum</td>
-<td>40</td>
-<td>242.230</td>
-<td>ns/op</td>
-<td>21</td>
-</tr>
-<tr>
-<td>fibVecSumKotlin</td>
-<td>12</td>
-<td>99.435</td>
-<td>ns/op</td>
-<td>21</td>
-</tr>
-<tr>
-<td>fibVecSumKotlin</td>
-<td>40</td>
-<td>273.117</td>
-<td>ns/op</td>
-<td>24</td>
-</tr>
-<tr>
-<td>fibTailVecSum</td>
-<td>12</td>
-<td>8.447</td>
-<td>ns/op</td>
-<td>2</td>
-</tr>
-<tr>
-<td>fibTailVecSum</td>
-<td>40</td>
-<td>14.800</td>
-<td>ns/op</td>
-<td>1</td>
-</tr>
-<tr>
-<td>fibIterative</td>
-<td>12</td>
-<td>4.666</td>
-<td>ns/op</td>
-<td>1</td>
-</tr>
-<tr>
-<td>fibIterative</td>
-<td>40</td>
-<td>11.372</td>
-<td>ns/op</td>
-<td>1</td>
-</tr>
-<tr>
-<td>fibIterativeTabulated</td>
-<td>12</td>
-<td>81.520</td>
-<td>ns/op</td>
-<td>17</td>
-</tr>
-<tr>
-<td>fibIterativeTabulated</td>
-<td>40</td>
-<td>257.801</td>
-<td>ns/op</td>
-<td>22</td>
-</tr>
-</tbody>
+	<thead>
+			<tr>
+					<th>Benchmark</th>
+					<th>(n)</th>
+					<th>Score</th>
+					<th>Units</th>
+					<th>Normalaized by <code>fibIterative</code></th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>fibNaive</td>
+					<td>12</td>
+					<td>505.787</td>
+					<td>ns/op</td>
+					<td>109</td>
+			</tr>
+			<tr>
+					<td>fibNaive</td>
+					<td>40</td>
+					<td>359727438.400</td>
+					<td>ns/op</td>
+					<td>32702494</td>
+			</tr>
+			<tr>
+					<td>fibCached</td>
+					<td>12</td>
+					<td>490.736</td>
+					<td>ns/op</td>
+					<td>106</td>
+			</tr>
+			<tr>
+					<td>fibCached</td>
+					<td>40</td>
+					<td>1393.079</td>
+					<td>ns/op</td>
+					<td>123</td>
+			</tr>
+			<tr>
+					<td>fibVecSum</td>
+					<td>12</td>
+					<td>56.979</td>
+					<td>ns/op</td>
+					<td>12</td>
+			</tr>
+			<tr>
+					<td>fibVecSum</td>
+					<td>40</td>
+					<td>242.230</td>
+					<td>ns/op</td>
+					<td>21</td>
+			</tr>
+			<tr>
+					<td>fibVecSumKotlin</td>
+					<td>12</td>
+					<td>99.435</td>
+					<td>ns/op</td>
+					<td>21</td>
+			</tr>
+			<tr>
+					<td>fibVecSumKotlin</td>
+					<td>40</td>
+					<td>273.117</td>
+					<td>ns/op</td>
+					<td>24</td>
+			</tr>
+			<tr>
+					<td>fibTailVecSum</td>
+					<td>12</td>
+					<td>8.447</td>
+					<td>ns/op</td>
+					<td>2</td>
+			</tr>
+			<tr>
+					<td>fibTailVecSum</td>
+					<td>40</td>
+					<td>14.800</td>
+					<td>ns/op</td>
+					<td>1</td>
+			</tr>
+			<tr>
+					<td>fibIterative</td>
+					<td>12</td>
+					<td>4.666</td>
+					<td>ns/op</td>
+					<td>1</td>
+			</tr>
+			<tr>
+					<td>fibIterative</td>
+					<td>40</td>
+					<td>11.372</td>
+					<td>ns/op</td>
+					<td>1</td>
+			</tr>
+			<tr>
+					<td>fibIterativeTabulated</td>
+					<td>12</td>
+					<td>81.520</td>
+					<td>ns/op</td>
+					<td>17</td>
+			</tr>
+			<tr>
+					<td>fibIterativeTabulated</td>
+					<td>40</td>
+					<td>257.801</td>
+					<td>ns/op</td>
+					<td>22</td>
+			</tr>
+	</tbody>
 </table>
+          
+          
+
 
         
+        
           <div class="blog-tags">
+            <span>Tags: </span>
             
-              <a href="https://sorokod.github.io//tags/kotlin/">kotlin</a>&nbsp;
+              <a href="/tags/kotlin/">kotlin</a>&nbsp;
             
-              <a href="https://sorokod.github.io//tags/algo/">algo</a>&nbsp;
+              <a href="/tags/algo/">algo</a>&nbsp;
             
-              <a href="https://sorokod.github.io//tags/jmh/">jmh</a>&nbsp;
+              <a href="/tags/jmh/">jmh</a>&nbsp;
             
           </div>
         
@@ -509,15 +582,29 @@ the sum into the recursive call:</p>
       </article>
 
       
-        <ul class="pager blog-pager">
+        
+          <a href="/post/2016-03-01-armstrong-numbers/" class="nav-side-arrow nav-side-prev" title="Armstrong Numbers" aria-label="Previous Post: Armstrong Numbers">
+            <i class="fas fa-chevron-left"></i>
+          </a>
+        
+        
+          <a href="/post/2018-03-31-kotlin-result/" class="nav-side-arrow nav-side-next" title="Kotlin Result" aria-label="Next Post: Kotlin Result">
+            <i class="fas fa-chevron-right"></i>
+          </a>
+        
+        <ul class="post-pager blog-post-pager">
           
-            <li class="previous">
-              <a href="https://sorokod.github.io/post/2016-03-01-armstrong-numbers/" data-toggle="tooltip" data-placement="top" title="Armstrong Numbers">&larr; Previous Post</a>
+            <li class="pager-prev">
+              <a href="/post/2016-03-01-armstrong-numbers/" data-bs-toggle="tooltip" data-bs-placement="top" title="Armstrong Numbers"><i class="fas fa-chevron-left"></i> Previous Post</a>
             </li>
           
+          <li class="pager-center">
+            
+
+          </li>
           
-            <li class="next">
-              <a href="https://sorokod.github.io/post/2018-03-31-kotlin-result/" data-toggle="tooltip" data-placement="top" title="Kotlin Result">Next Post &rarr;</a>
+            <li class="pager-next">
+              <a href="/post/2018-03-31-kotlin-result/" data-bs-toggle="tooltip" data-bs-placement="top" title="Kotlin Result">Next Post <i class="fas fa-chevron-right"></i></a>
             </li>
           
         </ul>
@@ -525,28 +612,85 @@ the sum into the recursive call:</p>
 
 
       
-
     </div>
   </div>
 </div>
 
+    
+    <div class="offcanvas offcanvas-start toc-panel" id="toc-panel" tabindex="-1" aria-labelledby="toc-title" data-toc-mode="headings">
+  <div class="offcanvas-header">
+    <span class="offcanvas-title toc-title" id="toc-title">Table of Contents</span>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close table of contents"></button>
+  </div>
+  <nav class="offcanvas-body toc-body"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#fibcached">FibCached</a></li>
+    <li><a href="#fibvectorsum">FibVectorSum</a></li>
+    <li><a href="#fibtailvecsum">FibTailVecSum</a></li>
+    <li><a href="#fibiterative">FibIterative</a></li>
+    <li><a href="#benchmarks">Benchmarks</a></li>
+  </ul>
+</nav></nav>
+</div>
+    
       
 <footer>
   <div class="container">
+    
     <div class="row">
-      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <div class="col-md-10 offset-md-1">
         <ul class="list-inline text-center footer-links">
           
-              <li>
-		
-		  <a href="https://stackoverflow.com/users/239101/david-soroko" title="StackOverflow">
-		
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+              <li class="list-inline-item" ><a rel="noopener noreferrer" href="https://stackoverflow.com/users/239101/david-soroko" title="StackOverflow" aria-label="StackOverflow">
                   <span class="fa-stack fa-lg">
                     <i class="fas fa-circle fa-stack-2x"></i>
-                    <i class="fab fa-stack-overflow fa-stack-1x fa-inverse"></i>
+                    <i class="fab fa-stack-overflow fa-stack-1x fa-inverse" aria-hidden="true"></i>
                   </span>
                 </a>
               </li>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
           
         </ul>
         <p class="credits copyright text-muted">
@@ -554,33 +698,48 @@ the sum into the recursive call:</p>
             
               David Soroko
             
+            &nbsp;&bull;&nbsp;
           
-
-          &nbsp;&bull;&nbsp;&copy;
+          &copy;
           
             2022
           
 
           
             &nbsp;&bull;&nbsp;
-            <a href="https://sorokod.github.io/">magpie</a>
+          
+          
+            <a href="/">magpie</a>
           
         </p>
         
         <p class="credits theme-by text-muted">
-          <a href="https://gohugo.io">Hugo v0.104.2</a> powered &nbsp;&bull;&nbsp; Theme <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> adapted from <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>
+          <a href="https://gohugo.io">Hugo v0.169.0</a> powered &nbsp;&bull;&nbsp; Theme <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> adapted from <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>
           
         </p>
       </div>
     </div>
   </div>
-</footer><script src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js" integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa" crossorigin="anonymous"></script>
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</footer>
 
-<script src="https://sorokod.github.io/js/main.js"></script><script> renderMathInElement(document.body); </script><script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js" integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js" integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script><script src="https://sorokod.github.io/js/load-photoswipe.js"></script>
+      
+
+      
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.45/dist/katex.min.js" integrity="sha384-Tt7wBxLKwSzFVRET4O4U9H6v8MNaQ/CjN2FMP4xFm0ErrFu6aNqoonRVW5W40iGI" crossorigin="anonymous"></script>
+
+<script defer onload="renderMathInElement(document.body);" src="https://cdn.jsdelivr.net/npm/katex@0.16.45/dist/contrib/auto-render.min.js" integrity="sha384-bjyGPfbij8/NDKJhSGZNP/khQVgtHUE5exjm4Ydllo42FwIgYsdLO2lXGmRBf5Mz" crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM&#43;D2scQbITxI" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/photoswipe@5.4.4/dist/umd/photoswipe.umd.min.js" integrity="sha384-k8EKyYcONphQ7zH4cQ0888JapXwrLTXQl/Ue1/jYgjVYahln1NWpnt2S4IC56LNh" crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/photoswipe@5.4.4/dist/umd/photoswipe-lightbox.umd.min.js" integrity="sha384-IiBVbUz6&#43;U&#43;Tbm/ijO2P0XRwcVzNfrMzloNLkrqHkbi6w5H0v6ie4fI9BIO4SwdK" crossorigin="anonymous"></script>
+
+
+
+<script src="/js/beautifulhugo-10976a71.3d94827e9ea031073d904df224bd8bb58f49c9e3aea65bd2482ae0b935623d0e.js" integrity="sha256-PZSCfp6gMQc9kE3yJL2LtY9JyeOuplvSSCrguTViPQ4=" crossorigin="anonymous"></script>
+
+
 
 
 
@@ -593,4 +752,3 @@ the sum into the recursive call:</p>
     
   </body>
 </html>
-

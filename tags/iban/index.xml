@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
 		<title>Iban on magpie</title>
-		<link>http://localhost:1313/tags/iban/</link>
+		<link>https://sorokod.github.io/tags/iban/</link>
 		<description>Recent content in Iban on magpie</description>
 		<generator>Hugo</generator>
 		<language>en-us</language>
@@ -12,12 +12,12 @@
 		
 			<lastBuildDate>Sun, 02 Oct 2022 19:00:01 +0100</lastBuildDate>
 		
-			<atom:link href="http://localhost:1313/tags/iban/index.xml" rel="self" type="application/rss+xml" />
+			<atom:link href="https://sorokod.github.io/tags/iban/index.xml" rel="self" type="application/rss+xml" />
 			<item>
 				<title>FR76 in French IBANs</title>
-				<link>http://localhost:1313/post/2022-10-01-fr-iban/</link>
+				<link>https://sorokod.github.io/post/2022-10-01-fr-iban/</link>
 				<pubDate>Sun, 02 Oct 2022 19:00:01 +0100</pubDate>
-				<guid>http://localhost:1313/post/2022-10-01-fr-iban/</guid>
+				<guid>https://sorokod.github.io/post/2022-10-01-fr-iban/</guid>
 				<description>&lt;p&gt;French IBANs are often prefixed with &lt;strong&gt;FR76&lt;/strong&gt;&lt;/p&gt;</description>
 			</item>
 	</channel>
